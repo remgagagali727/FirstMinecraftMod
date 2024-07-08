@@ -20,8 +20,10 @@ public class ModCreativeModTabs {
                     .icon(() -> new ItemStack(ModItems.PINK_QUARTZ.get()))
                     .title(Component.translatable("creativetab.true_minerals_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModItems.RAW_PINK_QUARTZ.get());
                         output.accept(ModItems.PINK_QUARTZ.get());
                         output.accept(ModBlocks.PINK_QUARTZ_BLOCK.get());
+                        output.accept(ModBlocks.PINK_QUARTZ_ORE.get());
                         output.accept(ModItems.TOPAZ.get());
                         output.accept(ModBlocks.TOPAZ_BLOCK.get());
                     })

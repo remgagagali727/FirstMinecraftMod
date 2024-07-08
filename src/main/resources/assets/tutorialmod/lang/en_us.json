@@ -1,9 +1,11 @@
 {
   "item.tutorialmod.topaz": "Topaz",
   "item.tutorialmod.pink_quartz": "Pink Quartz",
+  "item.tutorialmod.raw_pink_quartz": "Raw Pink Quartz",
 
   "block.tutorialmod.topaz_block": "Block of Topaz",
   "block.tutorialmod.pink_quartz_block": "Block of Pink Quartz",
+  "block.tutorialmod.pink_quartz_ore": "Pink Quartz Ore",
 
   "creativetab.true_minerals_tab": "True Minerals"
 }

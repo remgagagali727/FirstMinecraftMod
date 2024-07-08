@@ -18,6 +18,9 @@ public class ModItems {
     public static final RegistryObject<Item> PINK_QUARTZ = ITEMS.register("pink_quartz",
             () -> new Item(new Properties()));
 
+    public static final RegistryObject<Item> RAW_PINK_QUARTZ = ITEMS.register("raw_pink_quartz",
+            () -> new Item(new Properties()));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

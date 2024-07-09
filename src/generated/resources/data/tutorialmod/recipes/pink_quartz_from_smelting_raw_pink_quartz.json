@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 201,
+  "experience": 0.3,
+  "group": "pink_quartz",
+  "ingredient": {
+    "item": "tutorialmod:raw_pink_quartz"
+  },
+  "result": "tutorialmod:pink_quartz"
+}

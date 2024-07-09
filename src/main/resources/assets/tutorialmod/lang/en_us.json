@@ -2,10 +2,29 @@
   "item.tutorialmod.topaz": "Topaz",
   "item.tutorialmod.pink_quartz": "Pink Quartz",
   "item.tutorialmod.raw_pink_quartz": "Raw Pink Quartz",
+  "item.tutorialmod.uranium": "Uranium",
+  "tooltip.tutorialmod.uranium": "The best fuel in the word, Why? you ask, well obviously becouse it's §2§lGREEN§r (It looks tasty)",
+
+  "item.tutorialmod.pink_quartz_knife": "Pink Quartz Knife",
+  "item.tutorialmod.metal_detector": "Metal Detector",
 
   "block.tutorialmod.topaz_block": "Block of Topaz",
   "block.tutorialmod.pink_quartz_block": "Block of Pink Quartz",
-  "block.tutorialmod.pink_quartz_ore": "Pink Quartz Ore",
 
-  "creativetab.true_minerals_tab": "True Minerals"
+  "block.tutorialmod.pink_quartz_stairs": "Pink Quartz Stairs",
+  "block.tutorialmod.pink_quartz_slab": "Pink Quartz Slab",
+  "block.tutorialmod.pink_quartz_button": "Pink Quartz Button",
+  "block.tutorialmod.pink_quartz_pressure_plate": "Pink Quartz Pressure Plate",
+  "block.tutorialmod.pink_quartz_fence": "Pink Quartz Fence",
+  "block.tutorialmod.pink_quartz_fence_gate": "Pink Quartz Fence Gate",
+  "block.tutorialmod.pink_quartz_wall": "Pink Quartz Wall",
+    "block.tutorialmod.pink_quartz_door": "Pink Quartz Door",
+  "block.tutorialmod.pink_quartz_trapdoor": "Pink Quartz Trapdoor",
+
+  "block.tutorialmod.pink_quartz_ore": "Pink Quartz Ore",
+  "block.tutorialmod.sound_block": "Sound Block",
+
+  "creativetab.true_minerals_tab": "True Minerals",
+  "creativetab.extra_tools_tab": "Extra Tools",
+  "creativetab.sandwich_blocks_tab": "Sandwich Blocks"
 }

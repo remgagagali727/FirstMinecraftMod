@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_pink_quartz": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "tutorialmod:raw_pink_quartz"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "tutorialmod:pink_quartz_from_smelting_raw_pink_quartz"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_raw_pink_quartz",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "tutorialmod:pink_quartz_from_smelting_raw_pink_quartz"
+    ]
+  },
+  "sends_telemetry_event": false
+}

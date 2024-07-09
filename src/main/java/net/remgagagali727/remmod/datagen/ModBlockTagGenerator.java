@@ -1,0 +1,50 @@
+package net.remgagagali727.remmod.datagen;
+
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Block;
+import net.minecraftforge.common.Tags;
+import net.minecraftforge.common.data.BlockTagsProvider;
+import net.minecraftforge.common.data.ExistingFileHelper;
+import net.remgagagali727.remmod.ExampleMod;
+import net.remgagagali727.remmod.block.ModBlocks;
+import net.remgagagali727.remmod.util.ModTags;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.concurrent.CompletableFuture;
+
+public class ModBlockTagGenerator extends BlockTagsProvider {
+    public ModBlockTagGenerator(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
+        super(output, lookupProvider, ExampleMod.MOD_ID, existingFileHelper);
+    }
+
+    @Override
+    protected void addTags(HolderLookup.Provider provider) {
+        this.tag(ModTags.Blocks.METAL_DETECTOR_VALUABLES)
+                .add(ModBlocks.PINK_QUARTZ_ORE.get())
+                .addTag(Tags.Blocks.ORES);
+
+        this.tag(BlockTags.NEEDS_IRON_TOOL)
+                .add(ModBlocks.PINK_QUARTZ_ORE.get(),
+                        ModBlocks.PINK_QUARTZ_BLOCK.get());
+
+        this.tag(BlockTags.NEEDS_DIAMOND_TOOL);
+
+        this.tag(BlockTags.NEEDS_STONE_TOOL);
+
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(ModBlocks.PINK_QUARTZ_BLOCK.get(),
+                        ModBlocks.PINK_QUARTZ_ORE.get(),
+                        ModBlocks.TOPAZ_BLOCK.get());
+
+        this.tag(BlockTags.FENCES)
+                .add(ModBlocks.PINK_QUARTZ_FENCE.get());
+
+        this.tag(BlockTags.FENCE_GATES)
+                .add(ModBlocks.PINK_QUARTZ_FENCE_GATE.get());
+
+        this.tag(BlockTags.DOORS)
+                .add(ModBlocks.PINK_QUARTZ_DOOR.get());
+    }
+}

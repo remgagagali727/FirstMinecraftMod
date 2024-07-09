@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "tutorialmod:pink_quartz"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " P",
+    "S "
+  ],
+  "result": {
+    "item": "tutorialmod:pink_quartz_knife"
+  },
+  "show_notification": true
+}

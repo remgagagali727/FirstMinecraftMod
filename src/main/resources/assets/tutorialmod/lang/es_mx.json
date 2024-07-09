@@ -1,0 +1,29 @@
+{
+  "item.tutorialmod.topaz": "Topacio",
+  "item.tutorialmod.pink_quartz": "Cuarzo Rosa",
+  "item.tutorialmod.raw_pink_quartz": "Cuarzo Rosa Crudo",
+  "item.tutorialmod.uranium": "Uranio",
+  "tooltip.tutorialmod.uranium": "El mejor combustible del mundo. ¿Por qué? te preguntas, pues obviamente porque es §2§lVERDE§r (Parece delicioso)",
+
+  "item.tutorialmod.pink_quartz_knife": "Cuchillo de Cuarzo Rosa",
+  "item.tutorialmod.metal_detector": "Detector de Metales",
+
+  "block.tutorialmod.topaz_block": "Bloque de Topacio",
+  "block.tutorialmod.pink_quartz_block": "Bloque de Cuarzo Rosa",
+
+  "block.tutorialmod.pink_quartz_stairs": "Escaleras de Cuarzo Rosa",
+  "block.tutorialmod.pink_quartz_slab": "Loseta de Cuarzo Rosa",
+  "block.tutorialmod.pink_quartz_button": "Botón de Cuarzo Rosa",
+  "block.tutorialmod.pink_quartz_pressure_plate": "Placa de Presión de Cuarzo Rosa",
+  "block.tutorialmod.pink_quartz_fence": "Valla de Cuarzo Rosa",
+  "block.tutorialmod.pink_quartz_fence_gate": "Puerta de Valla de Cuarzo Rosa",
+  "block.tutorialmod.pink_quartz_wall": "Muro de Cuarzo Rosa",
+  "block.tutorialmod.pink_quartz_door": "Puerta de Cuarzo Rosa",
+  "block.tutorialmod.pink_quartz_trapdoor": "Trampilla de Cuarzo Rosa",
+
+  "block.tutorialmod.pink_quartz_ore": "Mena de Cuarzo Rosa",
+  "block.tutorialmod.sound_block": "Bloque de Sonido",
+
+  "creativetab.true_minerals_tab": "True Minerals",
+  "creativetab.sandwich_blocks_tab": "Bloques Sándwich"
+}

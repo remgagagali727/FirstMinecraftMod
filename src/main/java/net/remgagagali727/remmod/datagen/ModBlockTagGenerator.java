@@ -46,5 +46,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(BlockTags.DOORS)
                 .add(ModBlocks.PINK_QUARTZ_DOOR.get());
+
+        this.tag(BlockTags.WALLS)
+                .add(ModBlocks.PINK_QUARTZ_WALL.get());
     }
 }

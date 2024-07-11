@@ -45,39 +45,4 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
     }
-
-    @Override
-    public void stairsBlock(StairBlock block, ResourceLocation texture) {
-        super.stairsBlock(block, texture);
-        itemModels().withExistingParent(ForgeRegistries.BLOCKS.getKey(block).getPath(),
-                modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block).getPath()));
-    }
-
-    @Override
-    public void slabBlock(SlabBlock block, ResourceLocation doubleslab, ResourceLocation texture) {
-        super.slabBlock(block, doubleslab, texture);
-        itemModels().withExistingParent(ForgeRegistries.BLOCKS.getKey(block).getPath(),
-                modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block).getPath()));
-    }
-
-    @Override
-    public void pressurePlateBlock(PressurePlateBlock block, ResourceLocation texture) {
-        super.pressurePlateBlock(block, texture);
-        itemModels().withExistingParent(ForgeRegistries.BLOCKS.getKey(block).getPath(),
-                modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block).getPath()));
-    }
-
-    @Override
-    public void fenceGateBlock(FenceGateBlock block, ResourceLocation texture) {
-        super.fenceGateBlock(block, texture);
-        itemModels().withExistingParent(ForgeRegistries.BLOCKS.getKey(block).getPath(),
-                modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block).getPath()));
-    }
-
-    @Override
-    public void trapdoorBlockWithRenderType(TrapDoorBlock block, ResourceLocation texture, boolean orientable, String renderType) {
-        super.trapdoorBlockWithRenderType(block, texture, orientable, renderType);
-        itemModels().withExistingParent(ForgeRegistries.BLOCKS.getKey(block).getPath(),
-                modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block).getPath() + "_bottom"));
-    }
 }

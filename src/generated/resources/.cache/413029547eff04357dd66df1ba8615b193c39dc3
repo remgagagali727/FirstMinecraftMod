@@ -1,4 +1,4 @@
-// 1.20.1	2024-07-08T16:59:19.5364346	Block States: tutorialmod
+// 1.20.1	2024-07-10T17:09:07.6761913	Block States: tutorialmod
 2629b9eb5b0ea86a751dee2f3d45925e3198f581 assets/tutorialmod/blockstates/pink_quartz_block.json
 1af2bd4da8fea2f52d9817d8e1be45ef94dda45e assets/tutorialmod/blockstates/pink_quartz_button.json
 58235ac02dac60a51cfdd62122ed2350e19ff8ab assets/tutorialmod/blockstates/pink_quartz_door.json
@@ -46,11 +46,6 @@ a0623b99fac039f61ad7cd09f4c64226b658e4f4 assets/tutorialmod/models/block/pink_qu
 dac8730911a1737e4cdd2e70cfc8d32b0b0ba457 assets/tutorialmod/models/block/sound_block.json
 a2effbbd3d7dd436848dda23f7378d0fd470cf6a assets/tutorialmod/models/block/topaz_block.json
 d9c38578bc35a2004911827059a1b587cab76a21 assets/tutorialmod/models/item/pink_quartz_block.json
-ea9f4e406c2a9a7adc1f84b2dd4bc3af2bb31367 assets/tutorialmod/models/item/pink_quartz_fence_gate.json
 9f625831c9b64a62e83bf11d6057298650f24578 assets/tutorialmod/models/item/pink_quartz_ore.json
-b997670c9a3bcc8880ecad3146fd97b78e829c3e assets/tutorialmod/models/item/pink_quartz_pressure_plate.json
-d65aaee3904019252edb71c2e56fd52e9a02e7b4 assets/tutorialmod/models/item/pink_quartz_slab.json
-de2ca1aed73d79cfbc039c80d6b359d2f96ea9d4 assets/tutorialmod/models/item/pink_quartz_stairs.json
-b8fe78d903935372dfcd90687852c9e865135a7c assets/tutorialmod/models/item/pink_quartz_trapdoor.json
 e1bcffd5dcbfb758a3668455d04d23c6efda02cf assets/tutorialmod/models/item/sound_block.json
 90cd4b5f400c1417e6c0cb49a3e26b40946b7bdb assets/tutorialmod/models/item/topaz_block.json

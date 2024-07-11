@@ -3,7 +3,6 @@ package net.remgagagali727.remmod.item;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -39,6 +38,7 @@ public class ModCreativeModTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.PINK_QUARTZ_KNIFE.get());
                         output.accept(ModItems.METAL_DETECTOR.get());
+                        output.accept(ModItems.URANIUM_SCYTHE.get());
                     })
                     .build());
 

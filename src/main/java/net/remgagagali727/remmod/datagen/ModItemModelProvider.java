@@ -1,8 +1,8 @@
 package net.remgagagali727.remmod.datagen;
 
-import net.minecraft.client.tutorial.Tutorial;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
@@ -12,9 +12,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.remgagagali727.remmod.ExampleMod;
 import net.remgagagali727.remmod.block.ModBlocks;
+import net.remgagagali727.remmod.effects.ModEffects;
 import net.remgagagali727.remmod.item.ModItems;
-
-import java.rmi.registry.Registry;
 
 public class ModItemModelProvider extends ItemModelProvider {
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
@@ -30,6 +29,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.URANIUM);
         simpleItem(ModItems.RAW_PINK_QUARTZ);
 
+        swordItem(ModItems.URANIUM_SCYTHE);
+
         //FULL SET DE BLOQUES NO BLOQUES
 
         simpleBlockItem(ModBlocks.PINK_QUARTZ_DOOR);
@@ -38,13 +39,31 @@ public class ModItemModelProvider extends ItemModelProvider {
         buttonItem(ModBlocks.PINK_QUARTZ_BUTTON, ModBlocks.PINK_QUARTZ_BLOCK);
         wallItem(ModBlocks.PINK_QUARTZ_WALL, ModBlocks.PINK_QUARTZ_BLOCK);
 
-        //evenSimplerBlockItem(ModBlocks.PINK_QUARTZ_STAIRS);
-        //evenSimplerBlockItem(ModBlocks.PINK_QUARTZ_SLAB);
-        //evenSimplerBlockItem(ModBlocks.PINK_QUARTZ_PRESSURE_PLATE);
-        //evenSimplerBlockItem(ModBlocks.PINK_QUARTZ_FENCE_GATE);
+        evenSimplerBlockItem(ModBlocks.PINK_QUARTZ_STAIRS);
+        evenSimplerBlockItem(ModBlocks.PINK_QUARTZ_SLAB);
+        evenSimplerBlockItem(ModBlocks.PINK_QUARTZ_PRESSURE_PLATE);
+        evenSimplerBlockItem(ModBlocks.PINK_QUARTZ_FENCE_GATE);
 
-        //trapdoorItem(ModBlocks.PINK_QUARTZ_TRAPDOOR);
+        trapdoorItem(ModBlocks.PINK_QUARTZ_TRAPDOOR);
+
+        registerCustomEffectIcon(ModEffects.RADIATION);
     }
+
+    private void swordItem(RegistryObject<Item> swordItem) {
+        String swordName = swordItem.getId().getPath();
+        this.withExistingParent(swordName,
+                new ResourceLocation("item/handheld")).texture("layer0",
+                new ResourceLocation(ExampleMod.MOD_ID, "item/" + swordName));
+    }
+
+    private void registerCustomEffectIcon(RegistryObject<MobEffect> effectRegistryObject) {
+        String effectName = effectRegistryObject.getId().getPath();
+        this.withExistingParent(effectName,
+                new ResourceLocation("item/handheld")).texture("layer0",
+                new ResourceLocation(ExampleMod.MOD_ID, "mob_effect/" + effectName));
+    }
+
+
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),

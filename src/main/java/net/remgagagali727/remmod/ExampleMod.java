@@ -13,6 +13,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.remgagagali727.remmod.block.ModBlocks;
+import net.remgagagali727.remmod.effects.ModEffects;
 import net.remgagagali727.remmod.item.ModCreativeModTabs;
 import net.remgagagali727.remmod.item.ModItems;
 import org.slf4j.Logger;
@@ -28,6 +29,7 @@ public class ExampleMod {
         ModCreativeModTabs.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModEffects.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

@@ -35,10 +35,12 @@ public class ModItems {
 
     public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",
             () -> new MetalDetectorItem(new Item.Properties()
+                    .stacksTo(1)
                     .durability(50)));
 
     public static final RegistryObject<Item> URANIUM_SCYTHE = ITEMS.register("uranium_scythe",
-            () -> new UraniumScytheItem(5, 1.9f, new Item.Properties()));
+            () -> new UraniumScytheItem(5, 1.9f, new Item.Properties()
+                    .stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

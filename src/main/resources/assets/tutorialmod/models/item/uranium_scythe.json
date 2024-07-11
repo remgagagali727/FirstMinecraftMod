@@ -1,0 +1,19 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "tutorialmod:item/uranium_scythe_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "tutorialmod:item/uranium_scythe_2d"
+    },
+    "ground": {
+      "parent": "tutorialmod:item/uranium_scythe_2d"
+    },
+    "fixed": {
+      "parent": "tutorialmod:item/uranium_scythe_2d"
+    }
+
+  }
+}

@@ -29,8 +29,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.URANIUM);
         simpleItem(ModItems.RAW_PINK_QUARTZ);
 
-        swordItem(ModItems.URANIUM_SCYTHE);
-
         //FULL SET DE BLOQUES NO BLOQUES
 
         simpleBlockItem(ModBlocks.PINK_QUARTZ_DOOR);
@@ -74,7 +72,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     public void evenSimplerBlockItem(RegistryObject<Block> block) {
         this.withExistingParent(ExampleMod.MOD_ID + ":" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
                 //modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath()));
-                modLoc("block/pink_quartz_block"));
+                modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath()));
     }
 
     public void trapdoorItem(RegistryObject<Block> block) {

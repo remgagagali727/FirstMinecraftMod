@@ -10,11 +10,12 @@ import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Tiers;
 import net.remgagagali727.remmod.effects.ModEffects;
+import net.remgagagali727.remmod.item.ModToolTiers;
 
 public class UraniumScytheItem extends SwordItem {
 
     public UraniumScytheItem(int pAttackDamageModifier, float pAttackSpeedModifier, Properties pProperties) {
-        super(Tiers.IRON ,pAttackDamageModifier - 3, pAttackSpeedModifier - 4f, pProperties);
+        super(ModToolTiers.URANIUM, pAttackDamageModifier, pAttackSpeedModifier, pProperties);
     }
 
     @Override

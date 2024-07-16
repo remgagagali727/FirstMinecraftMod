@@ -27,8 +27,22 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.TOPAZ.get());
                         output.accept(ModBlocks.TOPAZ_BLOCK.get());
                         output.accept(ModItems.URANIUM.get());
+                        output.accept(ModItems.PURIFIED_URANIUM.get());
                     })
                     .build());
+
+    public static final RegistryObject<CreativeModeTab> ARMOR_TAB = CREATIVE_MOD_TABS
+            .register("armor_tab",
+                    () -> CreativeModeTab.builder()
+                            .icon(() -> new ItemStack(ModItems.PINK_QUARTZ_HELMET.get()))
+                            .title(Component.translatable("creativetab.armor_tab"))
+                            .displayItems((itemDisplayParameters, output) -> {
+                                output.accept(ModItems.PINK_QUARTZ_HELMET.get());
+                                output.accept(ModItems.PINK_QUARTZ_CHESTPLATE.get());
+                                output.accept(ModItems.PINK_QUARTZ_LEGGINGS.get());
+                                output.accept(ModItems.PINK_QUARTZ_BOOTS.get());
+                            })
+                            .build());
 
     public static final RegistryObject<CreativeModeTab> EXTRA_TOOLS_TAB = CREATIVE_MOD_TABS
             .register("extra_tools_tab",
@@ -41,6 +55,17 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.URANIUM_SCYTHE.get());
                     })
                     .build());
+
+    public static final RegistryObject<CreativeModeTab> SUPER_FOODS_TAB = CREATIVE_MOD_TABS
+            .register("super_foods_tab",
+                    () -> CreativeModeTab.builder()
+                            .icon(() -> new ItemStack(ModItems.RAW_PORK_LEG.get()))
+                            .title(Component.translatable("creativetab.super_foods_tab"))
+                            .displayItems((itemDisplayParameters, output) -> {
+                                output.accept(ModItems.RAW_PORK_LEG.get());
+                                output.accept(ModItems.COOKED_PORK_LEG.get());
+                            })
+                            .build());
 
     public static final RegistryObject<CreativeModeTab> SANDWICH_BLOCKS_TAB = CREATIVE_MOD_TABS
             .register("sandwich_blocks_tab",

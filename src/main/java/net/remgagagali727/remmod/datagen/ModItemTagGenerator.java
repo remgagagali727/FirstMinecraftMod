@@ -20,6 +20,12 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        this.tag(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.PINK_QUARTZ_HELMET.get(),
+                        ModItems.PINK_QUARTZ_BOOTS.get(),
+                        ModItems.PINK_QUARTZ_CHESTPLATE.get(),
+                        ModItems.PINK_QUARTZ_LEGGINGS.get());
+
         this.tag(Tags.Items.TOOLS)
                 .add(ModItems.URANIUM_SCYTHE.get());
 

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 201,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "tutorialmod:raw_pork_leg"
+  },
+  "result": "tutorialmod:cooked_pork_leg"
+}

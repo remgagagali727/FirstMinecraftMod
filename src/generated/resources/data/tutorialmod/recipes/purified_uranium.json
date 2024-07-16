@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "E": {
+      "item": "minecraft:ender_eye"
+    },
+    "P": {
+      "item": "tutorialmod:pink_quartz"
+    },
+    "U": {
+      "item": "tutorialmod:uranium"
+    }
+  },
+  "pattern": [
+    "PUP",
+    "DED",
+    "PUP"
+  ],
+  "result": {
+    "item": "tutorialmod:purified_uranium"
+  },
+  "show_notification": true
+}

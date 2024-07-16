@@ -34,7 +34,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         blasting(pWriter, PINK_QUARTZ_SMELTABLES, RecipeCategory.MISC, ModItems.PINK_QUARTZ.get(), 0.3f, 100, "pink_quartz");
         smelting(pWriter, PINK_QUARTZ_SMELTABLES, RecipeCategory.MISC, ModItems.PINK_QUARTZ.get(), 0.3f, 201, "pink_quartz");
 
-        simpleFoodCooking(pWriter, 200, ModItems.RAW_PORK_LEG, ModItems.COOKED_PORK_LEG, 0.35f);
+        simpleFoodCooking(pWriter, 201, ModItems.RAW_PORK_LEG, ModItems.COOKED_PORK_LEG, 0.35f);
 
 
 

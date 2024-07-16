@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "tutorialmod:raw_pork_leg"
+  },
+  "result": "tutorialmod:cooked_pork_leg"
+}

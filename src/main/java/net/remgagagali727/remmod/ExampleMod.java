@@ -19,6 +19,7 @@ import net.remgagagali727.remmod.block.ModBlocks;
 import net.remgagagali727.remmod.effects.ModEffects;
 import net.remgagagali727.remmod.item.ModCreativeModTabs;
 import net.remgagagali727.remmod.item.ModItems;
+import net.remgagagali727.remmod.loot.ModLootModifiers;
 import org.slf4j.Logger;
 
 @Mod(ExampleMod.MOD_ID)
@@ -33,6 +34,7 @@ public class ExampleMod {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModEffects.register(modEventBus);
+        ModLootModifiers.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::enqueueIMC);

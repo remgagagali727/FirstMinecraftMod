@@ -1,4 +1,4 @@
-// 1.20.1	2024-07-08T15:29:48.7468984	Loot Tables
+// 1.20.1	2024-07-17T17:36:46.2501188	Loot Tables
 1e7a56d41eb9676835d998b6271c1b52c913bf3e data/tutorialmod/loot_tables/blocks/pink_quartz_block.json
 90aa98a92ffe50c3e130f65c6cc14055fcccba1f data/tutorialmod/loot_tables/blocks/pink_quartz_button.json
 109a43b2f708fce0806939b8a24a3aefb8d7b144 data/tutorialmod/loot_tables/blocks/pink_quartz_door.json
@@ -11,4 +11,5 @@ d5988dec3442192a5a005514c93c6548cf044787 data/tutorialmod/loot_tables/blocks/pin
 baa667a052cb6fe5d2f722a2dc0234e944949d78 data/tutorialmod/loot_tables/blocks/pink_quartz_trapdoor.json
 8a01b351356072b5c656b021079d94e43526129f data/tutorialmod/loot_tables/blocks/pink_quartz_wall.json
 4a8cfacccc2c162b32d7ced097c65185c5c5bc88 data/tutorialmod/loot_tables/blocks/sound_block.json
+1f5745e65cfe5db7b41fcdf352e1a9f3378f9874 data/tutorialmod/loot_tables/blocks/strawberry_crop.json
 a1d98313fa05ee34362e53c6b08aa4d53a27cddb data/tutorialmod/loot_tables/blocks/topaz_block.json

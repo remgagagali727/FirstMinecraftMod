@@ -37,5 +37,24 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
                                 EntityFlagsPredicate.Builder.flags().setOnFire(true).build()))
                         .build()
         }, ModItems.COOKED_PORK_LEG.get(), 1, 3));
+
+        add("raw_beef_brisket", new AddItemModifier(new LootItemCondition[]{
+                LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS,
+                        EntityPredicate.Builder.entity().of(EntityType.COW)).build(),
+                LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS,
+                        EntityPredicate.Builder.entity().of(EntityType.COW).flags(
+                                EntityFlagsPredicate.Builder.flags().setOnFire(false).build()))
+                        .build()
+        }, ModItems.RAW_BEEF_BRISKET.get(), 0, 2));
+
+        add("cooked_beef_brisket", new AddItemModifier(new LootItemCondition[]{
+                LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS,
+                        EntityPredicate.Builder.entity().of(EntityType.COW)).build(),
+                LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS,
+                        EntityPredicate.Builder.entity().of(EntityType.COW).flags(
+                                EntityFlagsPredicate.Builder.flags().setOnFire(true).build()))
+                        .build()
+        }, ModItems.COOKED_BEEF_BRISKET.get(), 0, 2));
+
     }
 }

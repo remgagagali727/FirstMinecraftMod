@@ -13,6 +13,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.remgagagali727.remmod.ExampleMod;
 import net.remgagagali727.remmod.block.custom.SoundBlock;
+import net.remgagagali727.remmod.block.custom.StrawberryCropBlock;
 import net.remgagagali727.remmod.item.ModItems;
 
 import java.util.function.Supplier;
@@ -20,6 +21,11 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, ExampleMod.MOD_ID);
+
+    public static final RegistryObject<Block> STRAWBERRY_CROP = BLOCKS.register("strawberry_crop",
+            () -> new StrawberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)
+                    .noCollission()
+                    .noOcclusion()));
 
     public static final RegistryObject<Block> TOPAZ_BLOCK = registryBlock("topaz_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));

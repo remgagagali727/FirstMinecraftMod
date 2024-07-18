@@ -1,5 +1,9 @@
-// 1.20.1	2024-07-16T17:19:40.699224	Item Models: tutorialmod
+// 1.20.1	2024-07-17T18:50:45.7768238	Item Models: tutorialmod
+3f203e056b1fe9b898988dc8ac4a2813f5f44170 assets/tutorialmod/models/item/butter.json
+ce12180767232264aa898990333794d25f0ef26f assets/tutorialmod/models/item/caster_sugar.json
+81c4c4ed9a789a830af3e973708d9eabc2100271 assets/tutorialmod/models/item/cooked_beef_brisket.json
 1aaf244635c912763639a6379a3d5b928bc28596 assets/tutorialmod/models/item/cooked_pork_leg.json
+0e6a2cc43981ff6e54beb2c1df3341cd2f238a5d assets/tutorialmod/models/item/flour.json
 93719e53df04c62d91023fe733206eb93b7aac86 assets/tutorialmod/models/item/metal_detector.json
 a09b926d9be94bbfbcc92bbfddcde239c2a85099 assets/tutorialmod/models/item/pink_quartz.json
 c840babcc5dbc5c957f2688016c5a9fc4aa693a8 assets/tutorialmod/models/item/pink_quartz_boots.json
@@ -58,7 +62,11 @@ b8fe78d903935372dfcd90687852c9e865135a7c assets/tutorialmod/models/item/pink_qua
 b4215ea4ee40d99118c78288f38dbcf7ae89853f assets/tutorialmod/models/item/pink_quartz_wall.json
 e13a9ae88a442821c8e61b4f0bfec8493c8d1a3e assets/tutorialmod/models/item/purified_uranium.json
 b2ada71a33554d3aa44b892c1cdde918258e6cd6 assets/tutorialmod/models/item/radiation.json
+0da2680aa7ae254c4de7798a05a1f34a55c6dd43 assets/tutorialmod/models/item/raw_beef_brisket.json
 c66b0f0d1cc2b3fb9dd1de086ac1ecda44627a29 assets/tutorialmod/models/item/raw_pink_quartz.json
 6021a681b53b0e82718c09bdea5fb7bfec3818f9 assets/tutorialmod/models/item/raw_pork_leg.json
+18be4c46da7762a5389ccaf8aa8edb44aeaae240 assets/tutorialmod/models/item/salt.json
+0f4c6f5df2121954f3a0de1eb8e66d8c587fed43 assets/tutorialmod/models/item/strawberry.json
+85dffe5c3e34ee76908efb087a4ed2c43e945942 assets/tutorialmod/models/item/strawberry_seeds.json
 6cca5ce3885a1e1e448c49dc9140e7d0f45b3df1 assets/tutorialmod/models/item/topaz.json
 974ea9f2af3bb835f909c2f65add0212c20e59b7 assets/tutorialmod/models/item/uranium.json

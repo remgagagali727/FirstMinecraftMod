@@ -21,4 +21,22 @@ public class ModFoods {
             .meat()
             .nutrition(7)
             .build();
+
+    public static final FoodProperties RAW_BEEF_BRISKET = new FoodProperties.Builder()
+            .saturationMod(0.3f)
+            .meat()
+            .nutrition(5)
+            .build();
+
+    public static final FoodProperties COOKED_BEEF_BRISKET = new FoodProperties.Builder()
+            .saturationMod(0.5f)
+            .meat()
+            .nutrition(8)
+            .build();
+
+    public static final FoodProperties STRAWBERRY = new FoodProperties.Builder()
+            .saturationMod(0.2f)
+            .meat()
+            .nutrition(3)
+            .build();
 }

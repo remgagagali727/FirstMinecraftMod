@@ -1,4 +1,4 @@
-// 1.20.1	2024-07-10T17:09:07.6761913	Block States: tutorialmod
+// 1.20.1	2024-07-17T17:36:46.2531121	Block States: tutorialmod
 2629b9eb5b0ea86a751dee2f3d45925e3198f581 assets/tutorialmod/blockstates/pink_quartz_block.json
 1af2bd4da8fea2f52d9817d8e1be45ef94dda45e assets/tutorialmod/blockstates/pink_quartz_button.json
 58235ac02dac60a51cfdd62122ed2350e19ff8ab assets/tutorialmod/blockstates/pink_quartz_door.json
@@ -11,6 +11,7 @@ e10ef4d73f7991cda0ef1bdb550657d655fc77d9 assets/tutorialmod/blockstates/pink_qua
 2862a2812c858d8da578ccbada5022a46541e1bc assets/tutorialmod/blockstates/pink_quartz_trapdoor.json
 c96a1fed36fa28362051b9b8515b2bbb45807451 assets/tutorialmod/blockstates/pink_quartz_wall.json
 7e439f9c39ea91be588ddc78cf4cd903b5b9cb70 assets/tutorialmod/blockstates/sound_block.json
+e7f53e64f659401806aad6003e5356aac69c0a08 assets/tutorialmod/blockstates/strawberry_crop.json
 8feb4616edc20c04a129ffc48342c2f00554254e assets/tutorialmod/blockstates/topaz_block.json
 1ff6aa300b5f6f89615295b18a7317d14a54c0d6 assets/tutorialmod/models/block/pink_quartz_block.json
 6585b9ca6945bacce3ab1d6b304eb85c7747a8d2 assets/tutorialmod/models/block/pink_quartz_button.json
@@ -44,6 +45,12 @@ f0f43201c511179574aa5d02e947dbc6225ff53f assets/tutorialmod/models/block/pink_qu
 a0623b99fac039f61ad7cd09f4c64226b658e4f4 assets/tutorialmod/models/block/pink_quartz_wall_side.json
 263c21ad13632ef2aad91fce49c4828d8d10378b assets/tutorialmod/models/block/pink_quartz_wall_side_tall.json
 dac8730911a1737e4cdd2e70cfc8d32b0b0ba457 assets/tutorialmod/models/block/sound_block.json
+83b2f2225bdf3385193484a054e31ec7416ed3ed assets/tutorialmod/models/block/strawberry_stage0.json
+0198da8cd867092aa069ff09f84518eff09e9259 assets/tutorialmod/models/block/strawberry_stage1.json
+b6bd6b99d1b444b7f23c3ff006f58fe5db405ca1 assets/tutorialmod/models/block/strawberry_stage2.json
+4bea81641ddb82a0a78e324c05ddb794ffcd8cb4 assets/tutorialmod/models/block/strawberry_stage3.json
+d980ad62eb5f6b15090ea6557bc28483ad68f0ff assets/tutorialmod/models/block/strawberry_stage4.json
+b14b9dd2aa2d96cbbb4d20f9d0741c1bf4476786 assets/tutorialmod/models/block/strawberry_stage5.json
 a2effbbd3d7dd436848dda23f7378d0fd470cf6a assets/tutorialmod/models/block/topaz_block.json
 d9c38578bc35a2004911827059a1b587cab76a21 assets/tutorialmod/models/item/pink_quartz_block.json
 9f625831c9b64a62e83bf11d6057298650f24578 assets/tutorialmod/models/item/pink_quartz_ore.json

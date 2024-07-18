@@ -3,16 +3,22 @@ package net.remgagagali727.remmod.item;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Item.Properties;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.remgagagali727.remmod.ExampleMod;
+import net.remgagagali727.remmod.block.ModBlocks;
 import net.remgagagali727.remmod.item.custom.*;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, ExampleMod.MOD_ID);
+
+    //Semillas
+    public static final RegistryObject<Item> STRAWBERRY_SEEDS = ITEMS.register("strawberry_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.STRAWBERRY_CROP.get(), new Properties()));
 
     public static final RegistryObject<Item> TOPAZ = ITEMS.register("topaz",
             () -> new Item(new Properties()));
@@ -20,11 +26,34 @@ public class ModItems {
     public static final RegistryObject<Item> URANIUM = ITEMS.register("uranium",
             () -> new UraniumItem(new Properties().food(ModFoods.URANIUM), 4000));
 
+    //Ingredientes de comidas
+    public static final RegistryObject<Item> BUTTER = ITEMS.register("butter",
+            () -> new Item(new Properties()));
+
+    public static final RegistryObject<Item> SALT = ITEMS.register("salt",
+            () -> new Item(new Properties()));
+
+    public static final RegistryObject<Item> FLOUR = ITEMS.register("flour",
+            () -> new Item(new Properties()));
+
+    public static final RegistryObject<Item> CASTER_SUGAR = ITEMS.register("caster_sugar",
+            () -> new Item(new Properties()));
+
+    //Comidas
     public static final RegistryObject<Item> RAW_PORK_LEG = ITEMS.register("raw_pork_leg",
             () -> new Item(new Properties().food(ModFoods.RAW_PORK_LEG)));
 
+    public static final RegistryObject<Item> STRAWBERRY = ITEMS.register("strawberry",
+            () -> new Item(new Properties().food(ModFoods.STRAWBERRY)));
+
     public static final RegistryObject<Item> COOKED_PORK_LEG = ITEMS.register("cooked_pork_leg",
             () -> new Item(new Properties().food(ModFoods.COOKED_PORK_LEG)));
+
+    public static final RegistryObject<Item> RAW_BEEF_BRISKET = ITEMS.register("raw_beef_brisket",
+            () -> new Item(new Properties().food(ModFoods.RAW_BEEF_BRISKET)));
+
+    public static final RegistryObject<Item> COOKED_BEEF_BRISKET = ITEMS.register("cooked_beef_brisket",
+            () -> new Item(new Properties().food(ModFoods.COOKED_BEEF_BRISKET)));
 
     public static final RegistryObject<Item> PURIFIED_URANIUM = ITEMS.register("purified_uranium",
             () -> new FuelItem(new Properties(), 6000));

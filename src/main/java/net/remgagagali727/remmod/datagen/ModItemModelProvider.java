@@ -55,6 +55,18 @@ public class ModItemModelProvider extends ItemModelProvider {
         //Comida
         simpleItem(ModItems.RAW_PORK_LEG);
         simpleItem(ModItems.COOKED_PORK_LEG);
+        simpleItem(ModItems.RAW_BEEF_BRISKET);
+        simpleItem(ModItems.COOKED_BEEF_BRISKET);
+
+
+        simpleItem(ModItems.STRAWBERRY_SEEDS);
+        simpleItem(ModItems.STRAWBERRY);
+
+        simpleItem(ModItems.BUTTER);
+        simpleItem(ModItems.SALT);
+        simpleItem(ModItems.CASTER_SUGAR);
+        simpleItem(ModItems.FLOUR);
+
 
         //FULL SET DE BLOQUES NO BLOQUES
 

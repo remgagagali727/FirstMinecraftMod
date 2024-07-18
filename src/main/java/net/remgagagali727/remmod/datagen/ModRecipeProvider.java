@@ -34,8 +34,27 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         blasting(pWriter, PINK_QUARTZ_SMELTABLES, RecipeCategory.MISC, ModItems.PINK_QUARTZ.get(), 0.3f, 100, "pink_quartz");
         smelting(pWriter, PINK_QUARTZ_SMELTABLES, RecipeCategory.MISC, ModItems.PINK_QUARTZ.get(), 0.3f, 201, "pink_quartz");
 
-        simpleFoodCooking(pWriter, 201, ModItems.RAW_PORK_LEG, ModItems.COOKED_PORK_LEG, 0.35f);
+        //Recetas de cocina
 
+        simpleFoodCooking(pWriter, 201, ModItems.RAW_PORK_LEG, ModItems.COOKED_PORK_LEG, 0.35f);
+        simpleFoodCooking(pWriter, 201, ModItems.RAW_BEEF_BRISKET, ModItems.COOKED_BEEF_BRISKET, 0.35f);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.BUTTER.get(), 1)
+                .requires(ModItems.SALT.get())
+                .requires(Items.MILK_BUCKET)
+                .unlockedBy(getHasName(Items.MILK_BUCKET), has(Items.MILK_BUCKET))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.CASTER_SUGAR.get())
+                .requires(Items.SUGAR)
+                .unlockedBy(getHasName(Items.SUGAR), has(Items.SUGAR))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.FLOUR.get())
+                .requires(Items.WHEAT)
+                .requires(Items.WATER_BUCKET)
+                .unlockedBy(getHasName(Items.WHEAT), has(Items.WHEAT))
+                .save(pWriter);
 
 
 

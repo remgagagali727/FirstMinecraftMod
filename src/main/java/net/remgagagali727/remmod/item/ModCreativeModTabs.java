@@ -59,18 +59,27 @@ public class ModCreativeModTabs {
     public static final RegistryObject<CreativeModeTab> SUPER_FOODS_TAB = CREATIVE_MOD_TABS
             .register("super_foods_tab",
                     () -> CreativeModeTab.builder()
-                            .icon(() -> new ItemStack(ModItems.RAW_PORK_LEG.get()))
+                            .icon(() -> new ItemStack(ModItems.RAW_BEEF_BRISKET.get()))
                             .title(Component.translatable("creativetab.super_foods_tab"))
                             .displayItems((itemDisplayParameters, output) -> {
                                 output.accept(ModItems.RAW_PORK_LEG.get());
                                 output.accept(ModItems.COOKED_PORK_LEG.get());
+                                output.accept(ModItems.RAW_BEEF_BRISKET.get());
+                                output.accept(ModItems.COOKED_BEEF_BRISKET.get());
+                                output.accept(ModItems.STRAWBERRY_SEEDS.get());
+                                output.accept(ModItems.STRAWBERRY.get());
+                                output.accept(ModItems.BUTTER.get());
+                                output.accept(ModItems.SALT.get());
+                                output.accept(ModItems.CASTER_SUGAR.get());
+                                output.accept(ModItems.FLOUR.get());
+
                             })
                             .build());
 
     public static final RegistryObject<CreativeModeTab> SANDWICH_BLOCKS_TAB = CREATIVE_MOD_TABS
             .register("sandwich_blocks_tab",
                     () -> CreativeModeTab.builder()
-                            .icon(() -> new ItemStack(ModItems.PINK_QUARTZ_KNIFE.get()))
+                            .icon(() -> new ItemStack(ModBlocks.PINK_QUARTZ_STAIRS.get()))
                             .title(Component.translatable("creativetab.sandwich_blocks_tab"))
                             .displayItems((itemDisplayParameters, output) -> {
                                 output.accept(ModBlocks.SOUND_BLOCK.get());

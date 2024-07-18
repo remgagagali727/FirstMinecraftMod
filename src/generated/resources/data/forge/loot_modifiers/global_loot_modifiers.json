@@ -1,0 +1,9 @@
+{
+  "entries": [
+    "tutorialmod:raw_pork_leg",
+    "tutorialmod:cooked_beef_brisket",
+    "tutorialmod:cooked_pork_leg",
+    "tutorialmod:raw_beef_brisket"
+  ],
+  "replace": false
+}

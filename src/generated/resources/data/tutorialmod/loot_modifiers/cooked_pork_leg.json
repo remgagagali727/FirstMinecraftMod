@@ -1,0 +1,25 @@
+{
+  "type": "tutorialmod:add_item",
+  "conditions": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type": "minecraft:pig"
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type": "minecraft:pig",
+        "flags": {
+          "is_on_fire": true
+        }
+      }
+    }
+  ],
+  "item": "tutorialmod:cooked_pork_leg",
+  "maxCount": 3,
+  "minCount": 1
+}

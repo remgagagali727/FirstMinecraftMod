@@ -1,0 +1,25 @@
+{
+  "type": "tutorialmod:add_item",
+  "conditions": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type": "minecraft:cow"
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type": "minecraft:cow",
+        "flags": {
+          "is_on_fire": false
+        }
+      }
+    }
+  ],
+  "item": "tutorialmod:raw_beef_brisket",
+  "maxCount": 2,
+  "minCount": 0
+}

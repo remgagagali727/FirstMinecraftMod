@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 201,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "tutorialmod:raw_beef_brisket"
+  },
+  "result": "tutorialmod:cooked_beef_brisket"
+}

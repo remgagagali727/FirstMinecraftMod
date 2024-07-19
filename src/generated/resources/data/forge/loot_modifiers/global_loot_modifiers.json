@@ -1,8 +1,10 @@
 {
   "entries": [
     "tutorialmod:raw_pork_leg",
+    "tutorialmod:strawberry_seeds_from_grass",
     "tutorialmod:cooked_beef_brisket",
     "tutorialmod:cooked_pork_leg",
+    "tutorialmod:strawberry_seeds_from_tall_grass",
     "tutorialmod:raw_beef_brisket"
   ],
   "replace": false

@@ -9,7 +9,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.remgagagali727.remmod.item.ModItems;
 
-public class StrawberryCropBlock extends CropBlock {
+public class StrawberryCropBlock extends CropBlock implements ICropBasics{
     public static final int MAX_AGE = 5;
     public static final IntegerProperty AGE = BlockStateProperties.AGE_5;
 
@@ -37,4 +37,8 @@ public class StrawberryCropBlock extends CropBlock {
         pBuilder.add(AGE);
     }
 
+    @Override
+    public IntegerProperty getIntegerProperty() {
+        return AGE;
+    }
 }

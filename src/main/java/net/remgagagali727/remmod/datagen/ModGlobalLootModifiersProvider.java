@@ -4,9 +4,9 @@ import net.minecraft.advancements.critereon.EntityFlagsPredicate;
 import net.minecraft.advancements.critereon.EntityPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.LootContext;
-import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
-import net.minecraft.world.level.storage.loot.predicates.LootItemEntityPropertyCondition;
+import net.minecraft.world.level.storage.loot.predicates.*;
 import net.minecraftforge.common.data.GlobalLootModifierProvider;
 import net.remgagagali727.remmod.ExampleMod;
 import net.remgagagali727.remmod.item.ModItems;
@@ -28,6 +28,16 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
                                 EntityFlagsPredicate.Builder.flags().setOnFire(false).build()))
                         .build()
         }, ModItems.RAW_PORK_LEG.get(), 1, 3));
+
+        add("strawberry_seeds_from_grass", new AddItemModifier(new LootItemCondition[]{
+                LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
+                LootItemRandomChanceCondition.randomChance(0.025f).build()
+        }, ModItems.STRAWBERRY_SEEDS.get()));
+
+        add("strawberry_seeds_from_tall_grass", new AddItemModifier(new LootItemCondition[]{
+                LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.TALL_GRASS).build(),
+                LootItemRandomChanceCondition.randomChance(0.025f).build()
+        }, ModItems.STRAWBERRY_SEEDS.get()));
 
         add("cooked_pork_leg", new AddItemModifier(new LootItemCondition[]{
                 LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS,

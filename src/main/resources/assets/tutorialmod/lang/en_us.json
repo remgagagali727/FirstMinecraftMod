@@ -11,11 +11,17 @@
   "item.tutorialmod.uranium_scythe": "Uranium Scythe",
 
   "item.tutorialmod.strawberry_seeds": "Strawberry Seeds",
+  "item.tutorialmod.corn_seeds": "Corn Seeds",
+
   "item.tutorialmod.strawberry": "Strawberry",
+  "item.tutorialmod.corn": "Corn",
   "item.tutorialmod.butter": "Butter",
   "item.tutorialmod.salt": "Salt",
   "item.tutorialmod.caster_sugar": "Caster Sugar",
   "item.tutorialmod.flour": "Flour",
+  "item.tutorialmod.chocolate": "Chocolate",
+  "item.tutorialmod.chocolate_milk_cup": "Chocolate Milk Cup",
+  "item.tutorialmod.cup": "Cup",
 
   "item.tutorialmod.raw_beef_brisket": "Raw Beef Brisket",
   "item.tutorialmod.cooked_beef_brisket": "Cooked Beef Brisket",
@@ -43,10 +49,13 @@
   "block.tutorialmod.pink_quartz_ore": "Pink Quartz Ore",
   "block.tutorialmod.sound_block": "Sound Block",
 
+  "block.tutorialmod.catmint": "Catmint",
+
   "effect.tutorialmod.radiation": "Radiation",
 
   "creativetab.true_minerals_tab": "True Minerals",
   "creativetab.extra_tools_tab": "Extra Tools",
   "creativetab.sandwich_blocks_tab": "Sandwich Blocks",
+  "creativetab.sandwich_flowers_tab": "Sandwich Flowers",
   "creativetab.super_foods_tab": "Super Food"
 }

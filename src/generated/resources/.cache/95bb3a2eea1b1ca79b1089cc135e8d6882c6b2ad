@@ -1,6 +1,8 @@
-// 1.20.1	2024-07-17T16:45:04.5369301	Global Loot Modifiers : tutorialmod
-f85bd5c2ff8c293b2ad0a15aff336381681c00a2 data/forge/loot_modifiers/global_loot_modifiers.json
+// 1.20.1	2024-07-17T23:24:36.7068459	Global Loot Modifiers : tutorialmod
+7f1db2f10574c6cd7b3739e77dd8cdd63b6554f4 data/forge/loot_modifiers/global_loot_modifiers.json
 05f7f79ce8a3c9c9d6303f37187572fb3d9d513e data/tutorialmod/loot_modifiers/cooked_beef_brisket.json
 931648a168e7ad2bcd689a5af7690b2bf9e34175 data/tutorialmod/loot_modifiers/cooked_pork_leg.json
 b25eac7192f841f344d8f01a131ab81edd70c903 data/tutorialmod/loot_modifiers/raw_beef_brisket.json
 ac585c79596adbdf679911937cf3c1b950484a07 data/tutorialmod/loot_modifiers/raw_pork_leg.json
+7c148a3e976df619fee967f57ff09ab03fe664ee data/tutorialmod/loot_modifiers/strawberry_seeds_from_grass.json
+cbe5f04dd9d83d828e95c41825bc24acb35db36b data/tutorialmod/loot_modifiers/strawberry_seeds_from_tall_grass.json

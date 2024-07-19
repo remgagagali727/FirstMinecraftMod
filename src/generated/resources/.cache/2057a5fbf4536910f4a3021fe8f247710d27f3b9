@@ -1,8 +1,14 @@
-// 1.20.1	2024-07-17T18:50:45.7768238	Item Models: tutorialmod
+// 1.20.1	2024-07-18T19:41:09.9316482	Item Models: tutorialmod
 3f203e056b1fe9b898988dc8ac4a2813f5f44170 assets/tutorialmod/models/item/butter.json
 ce12180767232264aa898990333794d25f0ef26f assets/tutorialmod/models/item/caster_sugar.json
+d3e9cad00ae44c9319dfbb411667eb4a09a63e57 assets/tutorialmod/models/item/catmint.json
+46e92eb13bffd48c9fabe3c9cd93880325dbc3aa assets/tutorialmod/models/item/chocolate.json
+dc2cb9bd9a5b4e5865ad0202aa0acd884b22ca2d assets/tutorialmod/models/item/chocolate_milk_cup.json
 81c4c4ed9a789a830af3e973708d9eabc2100271 assets/tutorialmod/models/item/cooked_beef_brisket.json
 1aaf244635c912763639a6379a3d5b928bc28596 assets/tutorialmod/models/item/cooked_pork_leg.json
+6126e26da373f9113d9e9be875b14a0d13857444 assets/tutorialmod/models/item/corn.json
+4c5c277fa6360b149d6c3ab20584fcc4450cda27 assets/tutorialmod/models/item/corn_seeds.json
+fecaa64eaa5d66b947685352fef49c2e7ee90591 assets/tutorialmod/models/item/cup.json
 0e6a2cc43981ff6e54beb2c1df3341cd2f238a5d assets/tutorialmod/models/item/flour.json
 93719e53df04c62d91023fe733206eb93b7aac86 assets/tutorialmod/models/item/metal_detector.json
 a09b926d9be94bbfbcc92bbfddcde239c2a85099 assets/tutorialmod/models/item/pink_quartz.json

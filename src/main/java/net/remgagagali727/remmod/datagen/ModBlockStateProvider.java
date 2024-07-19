@@ -1,20 +1,21 @@
 package net.remgagagali727.remmod.datagen;
 
-import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.remgagagali727.remmod.ExampleMod;
 import net.remgagagali727.remmod.block.ModBlocks;
+import net.remgagagali727.remmod.block.custom.CornCropBlock;
+import net.remgagagali727.remmod.block.custom.ICropBasics;
 import net.remgagagali727.remmod.block.custom.StrawberryCropBlock;
 
-import java.rmi.registry.Registry;
 import java.util.function.Function;
 
 public class ModBlockStateProvider extends BlockStateProvider {
@@ -43,7 +44,26 @@ public class ModBlockStateProvider extends BlockStateProvider {
         doorBlockWithRenderType((DoorBlock) ModBlocks.PINK_QUARTZ_DOOR.get(), modLoc("block/pink_quartz_door_bottom"), modLoc("block/pink_quartz_door_top"), "cutout");
         trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.PINK_QUARTZ_TRAPDOOR.get(), modLoc("block/pink_quartz_trapdoor"), true, "cutout");
 
-        makeStrawberryCrop((CropBlock) ModBlocks.STRAWBERRY_CROP.get(), "strawberry_stage", "strawberry_stage");
+        makeCrop((CropBlock) ModBlocks.STRAWBERRY_CROP.get(), "strawberry_stage", StrawberryCropBlock.class);
+        makeCrop((CropBlock) ModBlocks.CORN_CROP.get(), "corn_stage", CornCropBlock.class);
+
+        simpleBlockWithItem(ModBlocks.CATMINT.get(), models().cross(blockTexture(ModBlocks.CATMINT.get()).getPath(),
+                blockTexture(ModBlocks.CATMINT.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_CATMINT.get(), models().singleTexture("potted_catmint",
+                new ResourceLocation("flower_pot_cross"), "plant",
+                blockTexture(ModBlocks.CATMINT.get())).renderType("cutout"));
+    }
+
+    public <T extends CropBlock & ICropBasics> void makeCrop(CropBlock block, String name, Class<T> tClass) {
+        Function<BlockState, ConfiguredModel[]> function = state -> states(state, block, name, tClass);
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    public <T extends CropBlock & ICropBasics> ConfiguredModel[] states(BlockState state, CropBlock block, String name, Class<T> tClass) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(name + state.getValue(((T) block).getIntegerProperty()),
+                new ResourceLocation(ExampleMod.MOD_ID, "block/" + name + state.getValue(((T) block).getIntegerProperty()))).renderType("cutout"));
+        return models;
     }
 
     public void makeStrawberryCrop(CropBlock block, String modelName, String textureName) {

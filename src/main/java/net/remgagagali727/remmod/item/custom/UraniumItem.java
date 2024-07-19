@@ -9,6 +9,7 @@ import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.DamageSources;
 import net.minecraft.world.damagesource.DamageTypes;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -31,11 +32,12 @@ public class UraniumItem extends FuelItem {
     }
 
     @Override
-    public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
+    public ItemStack finishUsingItem(ItemStack pStack, Level pLevel, LivingEntity pLivingEntity) {
         if(!pLevel.isClientSide()) {
             DamageSources ds = pLevel.damageSources();
-            pPlayer.hurt(pLevel.damageSources().generic(),Float.MAX_VALUE);
+            pLivingEntity.hurt(pLevel.damageSources().generic(),Float.MAX_VALUE);
         }
-        return super.use(pLevel, pPlayer, pUsedHand);
+        return super.finishUsingItem(pStack, pLevel, pLivingEntity);
     }
+
 }

@@ -61,11 +61,15 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleItem(ModItems.STRAWBERRY_SEEDS);
         simpleItem(ModItems.STRAWBERRY);
-
+        simpleItem(ModItems.CHOCOLATE_MILK_CUP);
+        simpleItem(ModItems.CUP);
         simpleItem(ModItems.BUTTER);
         simpleItem(ModItems.SALT);
         simpleItem(ModItems.CASTER_SUGAR);
         simpleItem(ModItems.FLOUR);
+        simpleItem(ModItems.CORN);
+        simpleItem(ModItems.CORN_SEEDS);
+        simpleItem(ModItems.CHOCOLATE);
 
 
         //FULL SET DE BLOQUES NO BLOQUES
@@ -89,6 +93,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.PINK_QUARTZ_CHESTPLATE);
         trimmedArmorItem(ModItems.PINK_QUARTZ_LEGGINGS);
         trimmedArmorItem(ModItems.PINK_QUARTZ_BOOTS);
+
+        simpleBlockItemBlockTexture(ModBlocks.CATMINT);
     }
 
     private void handHeldItem(RegistryObject<Item> swordItem) {
@@ -142,6 +148,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(ExampleMod.MOD_ID,"item/" + item.getId().getPath()));
+    }
+
+    private ItemModelBuilder simpleBlockItemBlockTexture(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(ExampleMod.MOD_ID,"block/" + item.getId().getPath()));
     }
 
     private void trimmedArmorItem(RegistryObject<Item> itemRegistryObject) {

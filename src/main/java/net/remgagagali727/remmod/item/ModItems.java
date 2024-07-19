@@ -20,6 +20,9 @@ public class ModItems {
     public static final RegistryObject<Item> STRAWBERRY_SEEDS = ITEMS.register("strawberry_seeds",
             () -> new ItemNameBlockItem(ModBlocks.STRAWBERRY_CROP.get(), new Properties()));
 
+    public static final RegistryObject<Item> CORN_SEEDS = ITEMS.register("corn_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.CORN_CROP.get(), new Properties()));
+
     public static final RegistryObject<Item> TOPAZ = ITEMS.register("topaz",
             () -> new Item(new Properties()));
 
@@ -40,11 +43,21 @@ public class ModItems {
             () -> new Item(new Properties()));
 
     //Comidas
-    public static final RegistryObject<Item> RAW_PORK_LEG = ITEMS.register("raw_pork_leg",
-            () -> new Item(new Properties().food(ModFoods.RAW_PORK_LEG)));
-
     public static final RegistryObject<Item> STRAWBERRY = ITEMS.register("strawberry",
             () -> new Item(new Properties().food(ModFoods.STRAWBERRY)));
+
+    public static final RegistryObject<Item> CHOCOLATE_MILK_CUP = ITEMS.register("chocolate_milk_cup",
+            () -> new Item(new Properties().food(ModFoods.CHOCOLATE_MILK_CUP)
+                    .stacksTo(16)));
+
+    public static final RegistryObject<Item> CHOCOLATE = ITEMS.register("chocolate",
+            () -> new ChocolateItem(new Properties().food(ModFoods.CHOCOLATE)));
+
+    public static final RegistryObject<Item> CORN = ITEMS.register("corn",
+            () -> new Item(new Properties().food(ModFoods.CORN)));
+
+    public static final RegistryObject<Item> RAW_PORK_LEG = ITEMS.register("raw_pork_leg",
+            () -> new Item(new Properties().food(ModFoods.RAW_PORK_LEG)));
 
     public static final RegistryObject<Item> COOKED_PORK_LEG = ITEMS.register("cooked_pork_leg",
             () -> new Item(new Properties().food(ModFoods.COOKED_PORK_LEG)));
@@ -85,6 +98,11 @@ public class ModItems {
             () -> new ArmorItem(ModArmorMaterials.PINK_QUARTZ, ArmorItem.Type.BOOTS, new Item.Properties()));
     public static final RegistryObject<Item> PINK_QUARTZ_LEGGINGS = ITEMS.register("pink_quartz_leggings",
             () -> new ArmorItem(ModArmorMaterials.PINK_QUARTZ, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+
+    //Herramientas
+    public static final RegistryObject<Item> CUP = ITEMS.register("cup",
+            () -> new CupItem(new Properties()
+                    .stacksTo(16)));
 
 
 

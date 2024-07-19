@@ -12,8 +12,10 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.remgagagali727.remmod.ExampleMod;
+import net.remgagagali727.remmod.block.custom.CornCropBlock;
 import net.remgagagali727.remmod.block.custom.SoundBlock;
 import net.remgagagali727.remmod.block.custom.StrawberryCropBlock;
+import net.remgagagali727.remmod.effects.ModEffects;
 import net.remgagagali727.remmod.item.ModItems;
 
 import java.util.function.Supplier;
@@ -22,13 +24,29 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, ExampleMod.MOD_ID);
 
+    //Crops
     public static final RegistryObject<Block> STRAWBERRY_CROP = BLOCKS.register("strawberry_crop",
             () -> new StrawberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)
                     .noCollission()
                     .noOcclusion()));
 
+    public static final RegistryObject<Block> CORN_CROP = BLOCKS.register("corn_crop",
+            () -> new CornCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)
+                    .noCollission()
+                    .noOcclusion()));
+
     public static final RegistryObject<Block> TOPAZ_BLOCK = registryBlock("topaz_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> CATMINT = registryBlock("catmint",
+            () -> new FlowerBlock(() -> ModEffects.RADIATION.get(), 5,
+                    BlockBehaviour.Properties.copy(Blocks.ALLIUM)
+                            .noCollission()
+                            .noCollission()));
+
+    public static final RegistryObject<Block> POTTED_CATMINT = BLOCKS.register("potted_catmint",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.CATMINT,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
 
     public static final RegistryObject<Block> PINK_QUARTZ_BLOCK = registryBlock("pink_quartz_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));

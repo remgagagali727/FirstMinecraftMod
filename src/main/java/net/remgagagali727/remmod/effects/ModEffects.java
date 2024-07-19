@@ -8,6 +8,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.remgagagali727.remmod.ExampleMod;
+import net.remgagagali727.remmod.effects.custom.ChocolatedEffect;
 import net.remgagagali727.remmod.effects.custom.RadiationEffect;
 
 public class ModEffects {
@@ -16,6 +17,9 @@ public class ModEffects {
 
     public static final RegistryObject<MobEffect> RADIATION = EFFECTS.register("radiation",
             () -> new RadiationEffect(MobEffectCategory.HARMFUL));
+
+    public static final RegistryObject<MobEffect> CHOCOLATED = EFFECTS.register("chocolated",
+            () -> new ChocolatedEffect(MobEffectCategory.NEUTRAL));
 
     public static void register(IEventBus modEventBus) {
         EFFECTS.register(modEventBus);

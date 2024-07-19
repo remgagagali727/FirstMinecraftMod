@@ -53,6 +53,7 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.PINK_QUARTZ_KNIFE.get());
                         output.accept(ModItems.METAL_DETECTOR.get());
                         output.accept(ModItems.URANIUM_SCYTHE.get());
+                        output.accept(ModItems.CUP.get());
                     })
                     .build());
 
@@ -72,7 +73,10 @@ public class ModCreativeModTabs {
                                 output.accept(ModItems.SALT.get());
                                 output.accept(ModItems.CASTER_SUGAR.get());
                                 output.accept(ModItems.FLOUR.get());
-
+                                output.accept(ModItems.CORN.get());
+                                output.accept(ModItems.CORN_SEEDS.get());
+                                output.accept(ModItems.CHOCOLATE.get());
+                                output.accept(ModItems.CHOCOLATE_MILK_CUP.get());
                             })
                             .build());
 
@@ -92,6 +96,16 @@ public class ModCreativeModTabs {
                                 output.accept(ModBlocks.PINK_QUARTZ_FENCE.get());
                                 output.accept(ModBlocks.PINK_QUARTZ_FENCE_GATE.get());
                                 output.accept(ModBlocks.PINK_QUARTZ_WALL.get());
+                            })
+                            .build());
+
+    public static final RegistryObject<CreativeModeTab> SANDWICH_FLOWERS_TAB = CREATIVE_MOD_TABS
+            .register("sandwich_flowers",
+                    () -> CreativeModeTab.builder()
+                            .icon(() -> new ItemStack(ModBlocks.CATMINT.get()))
+                            .title(Component.translatable("creativetab.sandwich_flowers_tab"))
+                            .displayItems((itemDisplayParameters, output) -> {
+                                output.accept(ModBlocks.CATMINT.get());
                             })
                             .build());
 

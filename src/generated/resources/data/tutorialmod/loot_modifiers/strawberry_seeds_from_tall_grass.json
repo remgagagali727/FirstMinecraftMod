@@ -1,0 +1,16 @@
+{
+  "type": "tutorialmod:add_item",
+  "conditions": [
+    {
+      "block": "minecraft:tall_grass",
+      "condition": "minecraft:block_state_property"
+    },
+    {
+      "chance": 0.025,
+      "condition": "minecraft:random_chance"
+    }
+  ],
+  "item": "tutorialmod:strawberry_seeds",
+  "maxCount": 1,
+  "minCount": 1
+}

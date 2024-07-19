@@ -1,8 +1,9 @@
-// 1.20.1	2024-07-18T19:41:09.9316482	Item Models: tutorialmod
+// 1.20.1	2024-07-18T22:38:53.2260627	Item Models: tutorialmod
 3f203e056b1fe9b898988dc8ac4a2813f5f44170 assets/tutorialmod/models/item/butter.json
 ce12180767232264aa898990333794d25f0ef26f assets/tutorialmod/models/item/caster_sugar.json
 d3e9cad00ae44c9319dfbb411667eb4a09a63e57 assets/tutorialmod/models/item/catmint.json
 46e92eb13bffd48c9fabe3c9cd93880325dbc3aa assets/tutorialmod/models/item/chocolate.json
+8f942c4d09d7406461b90b58805bc0fe0c739bb1 assets/tutorialmod/models/item/chocolate_cake.json
 dc2cb9bd9a5b4e5865ad0202aa0acd884b22ca2d assets/tutorialmod/models/item/chocolate_milk_cup.json
 81c4c4ed9a789a830af3e973708d9eabc2100271 assets/tutorialmod/models/item/cooked_beef_brisket.json
 1aaf244635c912763639a6379a3d5b928bc28596 assets/tutorialmod/models/item/cooked_pork_leg.json

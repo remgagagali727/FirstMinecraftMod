@@ -39,10 +39,23 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         simpleFoodCooking(pWriter, 201, ModItems.RAW_PORK_LEG, ModItems.COOKED_PORK_LEG, 0.35f);
         simpleFoodCooking(pWriter, 201, ModItems.RAW_BEEF_BRISKET, ModItems.COOKED_BEEF_BRISKET, 0.35f);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.BUTTER.get(), 1)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.BUTTER.get())
                 .requires(ModItems.SALT.get())
                 .requires(Items.MILK_BUCKET)
                 .unlockedBy(getHasName(Items.MILK_BUCKET), has(Items.MILK_BUCKET))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.CHOCOLATE.get())
+                .requires(Items.COCOA_BEANS)
+                .requires(Items.SUGAR)
+                .unlockedBy(getHasName(Items.COCOA_BEANS), has(Items.COCOA_BEANS))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.CHOCOLATE_MILK_CUP.get())
+                .requires(ModItems.CHOCOLATE.get())
+                .requires(Items.SUGAR)
+                .requires(ModItems.CUP.get())
+                .unlockedBy(getHasName(ModItems.CHOCOLATE.get()), has(ModItems.CHOCOLATE.get()))
                 .save(pWriter);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.CASTER_SUGAR.get())

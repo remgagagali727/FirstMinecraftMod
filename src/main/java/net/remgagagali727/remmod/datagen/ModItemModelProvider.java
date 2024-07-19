@@ -70,6 +70,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.CORN);
         simpleItem(ModItems.CORN_SEEDS);
         simpleItem(ModItems.CHOCOLATE);
+        simpleBlockItem(ModBlocks.CHOCOLATE_CAKE);
 
 
         //FULL SET DE BLOQUES NO BLOQUES

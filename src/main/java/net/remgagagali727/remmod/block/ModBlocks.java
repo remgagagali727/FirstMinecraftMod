@@ -51,6 +51,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> PINK_QUARTZ_BLOCK = registryBlock("pink_quartz_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
+    public static final RegistryObject<Block> CHOCOLATE_CAKE = registryBlock("chocolate_cake",
+            () -> new CakeBlock(BlockBehaviour.Properties.copy(Blocks.CAKE)));
+
     public static final RegistryObject<Block> PINK_QUARTZ_STAIRS = registryBlock("pink_quartz_stairs",
             () -> new StairBlock(() -> ModBlocks.PINK_QUARTZ_BLOCK.get().defaultBlockState()
                     ,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));

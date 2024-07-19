@@ -77,6 +77,7 @@ public class ModCreativeModTabs {
                                 output.accept(ModItems.CORN_SEEDS.get());
                                 output.accept(ModItems.CHOCOLATE.get());
                                 output.accept(ModItems.CHOCOLATE_MILK_CUP.get());
+                                output.accept(ModBlocks.CHOCOLATE_CAKE.get());
                             })
                             .build());
 

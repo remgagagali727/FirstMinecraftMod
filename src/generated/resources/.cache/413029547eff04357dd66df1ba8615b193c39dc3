@@ -1,5 +1,6 @@
-// 1.20.1	2024-07-18T18:23:32.8571526	Block States: tutorialmod
+// 1.20.1	2024-07-18T22:38:53.2175675	Block States: tutorialmod
 4f6f6f43eb03fe4d9e5ce223f245812e0d7eae93 assets/tutorialmod/blockstates/catmint.json
+1f2455eccadc0dc066b0d1684795616191047757 assets/tutorialmod/blockstates/chocolate_cake.json
 2e6223a51136a76da6869c52734f036434ce08dd assets/tutorialmod/blockstates/corn_crop.json
 2629b9eb5b0ea86a751dee2f3d45925e3198f581 assets/tutorialmod/blockstates/pink_quartz_block.json
 1af2bd4da8fea2f52d9817d8e1be45ef94dda45e assets/tutorialmod/blockstates/pink_quartz_button.json
@@ -17,6 +18,13 @@ c96a1fed36fa28362051b9b8515b2bbb45807451 assets/tutorialmod/blockstates/pink_qua
 e7f53e64f659401806aad6003e5356aac69c0a08 assets/tutorialmod/blockstates/strawberry_crop.json
 8feb4616edc20c04a129ffc48342c2f00554254e assets/tutorialmod/blockstates/topaz_block.json
 20a742ea61b61bfcdcce006fd7b87dd9ad257a2f assets/tutorialmod/models/block/catmint.json
+96090fc8e9d1edaa238fd111f1818c40e52d4189 assets/tutorialmod/models/block/chocolate_cake0.json
+4470beb058f43f2f88225a2c52571bd84970364b assets/tutorialmod/models/block/chocolate_cake1.json
+f95b28fc3e2a40c69e46d8768c6c530213ca93d8 assets/tutorialmod/models/block/chocolate_cake2.json
+27dfd24bf396541bcb7c575446e8d8b3ff766ef7 assets/tutorialmod/models/block/chocolate_cake3.json
+1ac80d94034f78fcda2d9b406e63e9eea9b116f8 assets/tutorialmod/models/block/chocolate_cake4.json
+c3fd31c015384bdf9cf5968200a15ff46c1b0135 assets/tutorialmod/models/block/chocolate_cake5.json
+1849028726dc9183af3c942eff6d6602009af131 assets/tutorialmod/models/block/chocolate_cake6.json
 754cb4ab8d1d008680577148253c89c186583180 assets/tutorialmod/models/block/corn_stage0.json
 225572c19d81b469d7fd93145f95bc592e8c5ecc assets/tutorialmod/models/block/corn_stage1.json
 4cd69fd7faae1eea0b958c37b6ac7ca30f48a9ff assets/tutorialmod/models/block/corn_stage2.json

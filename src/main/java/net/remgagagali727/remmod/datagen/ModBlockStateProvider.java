@@ -2,12 +2,9 @@ package net.remgagagali727.remmod.datagen;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.client.model.generators.BlockStateProvider;
-import net.minecraftforge.client.model.generators.ConfiguredModel;
+import net.minecraftforge.client.model.generators.*;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 import net.remgagagali727.remmod.ExampleMod;
@@ -16,6 +13,7 @@ import net.remgagagali727.remmod.block.custom.CornCropBlock;
 import net.remgagagali727.remmod.block.custom.ICropBasics;
 import net.remgagagali727.remmod.block.custom.StrawberryCropBlock;
 
+import java.util.List;
 import java.util.function.Function;
 
 public class ModBlockStateProvider extends BlockStateProvider {
@@ -28,6 +26,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.PINK_QUARTZ_BLOCK);
         blockWithItem(ModBlocks.PINK_QUARTZ_ORE);
         blockWithItem(ModBlocks.TOPAZ_BLOCK);
+
+
 
         blockWithItem(ModBlocks.SOUND_BLOCK);
 
@@ -52,34 +52,50 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(ModBlocks.POTTED_CATMINT.get(), models().singleTexture("potted_catmint",
                 new ResourceLocation("flower_pot_cross"), "plant",
                 blockTexture(ModBlocks.CATMINT.get())).renderType("cutout"));
-    }
 
-    public <T extends CropBlock & ICropBasics> void makeCrop(CropBlock block, String name, Class<T> tClass) {
-        Function<BlockState, ConfiguredModel[]> function = state -> states(state, block, name, tClass);
-        getVariantBuilder(block).forAllStates(function);
-    }
+        //cakeBlock(ModBlocks.CHOCOLATE_CAKE);
 
-    public <T extends CropBlock & ICropBasics> ConfiguredModel[] states(BlockState state, CropBlock block, String name, Class<T> tClass) {
-        ConfiguredModel[] models = new ConfiguredModel[1];
-        models[0] = new ConfiguredModel(models().crop(name + state.getValue(((T) block).getIntegerProperty()),
-                new ResourceLocation(ExampleMod.MOD_ID, "block/" + name + state.getValue(((T) block).getIntegerProperty()))).renderType("cutout"));
-        return models;
-    }
-
-    public void makeStrawberryCrop(CropBlock block, String modelName, String textureName) {
-        Function<BlockState, ConfiguredModel[]> function = state -> strawberryStates(state, block, modelName, textureName);
-        getVariantBuilder(block).forAllStates(function);
-    }
-
-    private ConfiguredModel[] strawberryStates(BlockState state, CropBlock block, String modelName, String textureName) {
-        ConfiguredModel[] models = new ConfiguredModel[1];
-        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((StrawberryCropBlock) block).getAgeProperty()),
-                new ResourceLocation(ExampleMod.MOD_ID, "block/" + textureName + state.getValue(((StrawberryCropBlock) block).getAgeProperty()))).renderType("cutout"));
-
-        return models;
+        makeCake(ModBlocks.CHOCOLATE_CAKE);
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+    }
+
+    private void makeCake(RegistryObject<Block> block) {
+        String name = block.getId().getPath();
+        CakeBlock cakeBlock = ((CakeBlock) block.get());
+        List<String> extra = List.of(
+                "", "_slice1", "_slice2", "_slice3", "_slice4", "_slice5", "_slice6"
+        );
+        Function<BlockState, ConfiguredModel[]> function = state -> cakeStates(state, name);
+        getVariantBuilder(cakeBlock).forAllStates(function);
+    }
+
+    private ConfiguredModel[] cakeStates(BlockState state, String path) {
+        BlockModelBuilder BMB = models().withExistingParent(path + state.getValue(CakeBlock.BITES),
+                new ResourceLocation(ExampleMod.MOD_ID + ":block/cake_template" + state.getValue(CakeBlock.BITES)))
+                    .texture("particle", new ResourceLocation(ExampleMod.MOD_ID + ":block/" + path + "_top"))
+                    .texture("bottom", new ResourceLocation(ExampleMod.MOD_ID + ":block/" + path + "_bottom"))
+                    .texture("top", new ResourceLocation(ExampleMod.MOD_ID + ":block/" + path + "_top"))
+                    .texture("side", new ResourceLocation(ExampleMod.MOD_ID + ":block/" + path + "_side"))
+                    .texture("inside", new ResourceLocation(ExampleMod.MOD_ID + ":block/" + path + "_inner"));
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = ConfiguredModel.builder()
+                .modelFile(BMB)
+                .buildLast();
+        return models;
+    }
+
+    public <T extends CropBlock & ICropBasics> void makeCrop(CropBlock block, String name, Class<T> tClass) {
+        Function<BlockState, ConfiguredModel[]> function = state -> cropStates(state, block, name, tClass);
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    public <T extends CropBlock & ICropBasics> ConfiguredModel[] cropStates(BlockState state, CropBlock block, String name, Class<T> tClass) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(name + state.getValue(((T) block).getIntegerProperty()),
+                new ResourceLocation(ExampleMod.MOD_ID, "block/" + name + state.getValue(((T) block).getIntegerProperty()))).renderType("cutout"));
+        return models;
     }
 }

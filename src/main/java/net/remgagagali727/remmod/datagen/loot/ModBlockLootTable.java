@@ -15,6 +15,7 @@ import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
 import net.remgagagali727.remmod.block.ModBlocks;
 import net.remgagagali727.remmod.block.custom.CornCropBlock;
@@ -58,6 +59,8 @@ public class ModBlockLootTable extends BlockLootSubProvider {
 
         cropLootTable(ModBlocks.CORN_CROP.get(), ModItems.CORN_SEEDS.get(), ModItems.CORN.get(),
                 CornCropBlock.AGE, CornCropBlock.MAX_AGE);
+
+        this.add(ModBlocks.CHOCOLATE_CAKE.get(), noDrop());
     }
 
     private void cropLootTable(Block crop, Item seeds, Item result, IntegerProperty ip, int maxAge) {

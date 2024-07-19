@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "tutorialmod:chocolate"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "tutorialmod:cup"
+    }
+  ],
+  "result": {
+    "item": "tutorialmod:chocolate_milk_cup"
+  }
+}

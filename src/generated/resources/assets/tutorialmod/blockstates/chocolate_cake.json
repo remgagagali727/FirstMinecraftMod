@@ -1,0 +1,25 @@
+{
+  "variants": {
+    "bites=0": {
+      "model": "tutorialmod:block/chocolate_cake0"
+    },
+    "bites=1": {
+      "model": "tutorialmod:block/chocolate_cake1"
+    },
+    "bites=2": {
+      "model": "tutorialmod:block/chocolate_cake2"
+    },
+    "bites=3": {
+      "model": "tutorialmod:block/chocolate_cake3"
+    },
+    "bites=4": {
+      "model": "tutorialmod:block/chocolate_cake4"
+    },
+    "bites=5": {
+      "model": "tutorialmod:block/chocolate_cake5"
+    },
+    "bites=6": {
+      "model": "tutorialmod:block/chocolate_cake6"
+    }
+  }
+}

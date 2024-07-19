@@ -1,0 +1,10 @@
+{
+  "parent": "tutorialmod:block/cake_template2",
+  "textures": {
+    "bottom": "tutorialmod:block/chocolate_cake_bottom",
+    "inside": "tutorialmod:block/chocolate_cake_inner",
+    "particle": "tutorialmod:block/chocolate_cake_top",
+    "side": "tutorialmod:block/chocolate_cake_side",
+    "top": "tutorialmod:block/chocolate_cake_top"
+  }
+}

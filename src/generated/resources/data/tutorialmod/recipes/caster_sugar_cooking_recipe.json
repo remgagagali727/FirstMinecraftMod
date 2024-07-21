@@ -1,0 +1,11 @@
+{
+  "type": "tutorialmod:cooking_table",
+  "ingredients": [
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "output": {
+    "item": "tutorialmod:caster_sugar"
+  }
+}

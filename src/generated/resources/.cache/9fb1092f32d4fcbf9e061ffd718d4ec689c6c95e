@@ -1,4 +1,4 @@
-// 1.20.1	2024-07-20T20:05:33.9014585	Recipes
+// 1.20.1	2024-07-20T20:08:48.2471792	Recipes
 f0ceaef77a3e135aa5ff2090c3889fd4f91d0406 data/minecraft/advancements/recipes/food/cooked_beef_brisket_from_campfire.json
 5b18e6ae9afe9abcb37a4a9ceb6ef81d712ef909 data/minecraft/advancements/recipes/food/cooked_beef_brisket_from_furnace.json
 e28d4e27ea21bf267e37bd124874d908207e2681 data/minecraft/advancements/recipes/food/cooked_beef_brisket_from_smoking.json
@@ -20,6 +20,8 @@ e81ecd658b2750b3d7ca42d9446724f6bca827a7 data/tutorialmod/advancements/recipes/m
 db1253db7255b971473d0d500e1372fc0a56ee8f data/tutorialmod/advancements/recipes/misc/pink_quartz_from_smelting_raw_pink_quartz.json
 14dcc5f5ec20f2da5c86bcde6abef212d64e85ce data/tutorialmod/advancements/recipes/misc/purified_uranium.json
 7a81697c4f8c3e2966059ad72bd1bf2f535f469b data/tutorialmod/recipes/butter_cooking_recipe.json
+f03e3324a45d5fcd8a91e835c97256dc9e5e90a9 data/tutorialmod/recipes/caster_sugar_cooking_recipe.json
+a27ad326eeb92ff568254e580f0d613954629f6e data/tutorialmod/recipes/chocolate_cooking_recipe.json
 77b13459964ee08268055b4feb28ec7f062d2d3a data/tutorialmod/recipes/chocolate_milk_cup_cooking_recipe.json
 113c0f8d9adb94893197c922373236c3d0655568 data/tutorialmod/recipes/flour_cooking_recipe.json
 87cee023271521bf220b609dd310ee4041fd19ed data/tutorialmod/recipes/pink_quartz.json

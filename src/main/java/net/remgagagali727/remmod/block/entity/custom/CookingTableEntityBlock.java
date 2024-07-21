@@ -137,7 +137,6 @@ public class CookingTableEntityBlock extends BlockEntity implements MenuProvider
 
     public void tick(Level level, BlockPos blockPos, BlockState blockState) {
         if(hasRecipe()) {
-            System.out.println("Fuel check: " + fuel);
             if(!hasFuel()) {
                 if(!canRechargeFuel()) {
                     return;

@@ -84,6 +84,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         }, ModItems.BUTTER.get(), "butter");
 
         createCookingTableRecipe(pWriter, new Item[]{
+                Items.SUGAR
+        }, ModItems.CASTER_SUGAR.get(), "caster_sugar");
+
+        createCookingTableRecipe(pWriter, new Item[]{
+                Items.COCOA_BEANS,
+                Items.SUGAR
+        }, ModItems.CHOCOLATE.get(), "chocolate");
+
+        createCookingTableRecipe(pWriter, new Item[]{
                 ModItems.CHOCOLATE.get(),
                 Items.SUGAR,
                 ModItems.CUP.get()

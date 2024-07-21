@@ -1,0 +1,14 @@
+{
+  "type": "tutorialmod:cooking_table",
+  "ingredients": [
+    {
+      "item": "tutorialmod:salt"
+    },
+    {
+      "item": "minecraft:milk_bucket"
+    }
+  ],
+  "output": {
+    "item": "tutorialmod:butter"
+  }
+}

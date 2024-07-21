@@ -1,6 +1,5 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
+  "type": "tutorialmod:cooking_table",
   "ingredients": [
     {
       "item": "tutorialmod:chocolate"
@@ -12,7 +11,7 @@
       "item": "tutorialmod:cup"
     }
   ],
-  "result": {
+  "output": {
     "item": "tutorialmod:chocolate_milk_cup"
   }
 }

@@ -1,6 +1,5 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
+  "type": "tutorialmod:cooking_table",
   "ingredients": [
     {
       "item": "minecraft:wheat"
@@ -9,7 +8,7 @@
       "item": "minecraft:water_bucket"
     }
   ],
-  "result": {
+  "output": {
     "item": "tutorialmod:flour"
   }
 }

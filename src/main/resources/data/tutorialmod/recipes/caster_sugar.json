@@ -1,12 +1,11 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
+  "type": "tutorialmod:cooking_table",
   "ingredients": [
     {
       "item": "minecraft:sugar"
     }
   ],
-  "result": {
+  "output": {
     "item": "tutorialmod:caster_sugar"
   }
 }

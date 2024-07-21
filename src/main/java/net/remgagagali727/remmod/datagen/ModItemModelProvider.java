@@ -71,6 +71,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.CORN_SEEDS);
         simpleItem(ModItems.CHOCOLATE);
         simpleBlockItem(ModBlocks.CHOCOLATE_CAKE);
+        simpleBlockItem(ModBlocks.COOKING_TABLE);
 
 
         //FULL SET DE BLOQUES NO BLOQUES
@@ -122,7 +123,6 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     public void evenSimplerBlockItem(RegistryObject<Block> block) {
         this.withExistingParent(ExampleMod.MOD_ID + ":" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
-                //modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath()));
                 modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath()));
     }
 

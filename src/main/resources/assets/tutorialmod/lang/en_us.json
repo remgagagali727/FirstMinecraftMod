@@ -34,6 +34,7 @@
   "item.tutorialmod.pink_quartz_boots": "Pink Quartz Boots",
 
   "block.tutorialmod.topaz_block": "Block of Topaz",
+  "block.tutorialmod.cooking_table": "Cooking Table",
   "block.tutorialmod.pink_quartz_block": "Block of Pink Quartz",
 
   "block.tutorialmod.chocolate_cake": "Chocolate Cake",
@@ -54,10 +55,13 @@
   "block.tutorialmod.catmint": "Catmint",
 
   "effect.tutorialmod.radiation": "Radiation",
+  "effect.tutorialmod.chocolated": "Chocolated",
 
   "creativetab.true_minerals_tab": "True Minerals",
   "creativetab.extra_tools_tab": "Extra Tools",
   "creativetab.sandwich_blocks_tab": "Sandwich Blocks",
   "creativetab.sandwich_flowers_tab": "Sandwich Flowers",
-  "creativetab.super_foods_tab": "Super Food"
+  "creativetab.super_foods_tab": "Super Food",
+
+  "entity.minecraft.villager.tutorialmod.cooking_master": "Cooking Master"
 }

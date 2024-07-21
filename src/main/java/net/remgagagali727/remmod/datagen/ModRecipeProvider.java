@@ -2,6 +2,7 @@ package net.remgagagali727.remmod.datagen;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
@@ -14,6 +15,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.remgagagali727.remmod.ExampleMod;
 import net.remgagagali727.remmod.block.ModBlocks;
 import net.remgagagali727.remmod.item.ModItems;
+import net.remgagagali727.remmod.recipe.CookingTableRecipeBuilder;
 
 import java.util.Iterator;
 import java.util.List;
@@ -34,41 +36,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         blasting(pWriter, PINK_QUARTZ_SMELTABLES, RecipeCategory.MISC, ModItems.PINK_QUARTZ.get(), 0.3f, 100, "pink_quartz");
         smelting(pWriter, PINK_QUARTZ_SMELTABLES, RecipeCategory.MISC, ModItems.PINK_QUARTZ.get(), 0.3f, 201, "pink_quartz");
 
-        //Recetas de cocina
+        //Recetas de cocina (Smoker)
 
         simpleFoodCooking(pWriter, 201, ModItems.RAW_PORK_LEG, ModItems.COOKED_PORK_LEG, 0.35f);
         simpleFoodCooking(pWriter, 201, ModItems.RAW_BEEF_BRISKET, ModItems.COOKED_BEEF_BRISKET, 0.35f);
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.BUTTER.get())
-                .requires(ModItems.SALT.get())
-                .requires(Items.MILK_BUCKET)
-                .unlockedBy(getHasName(Items.MILK_BUCKET), has(Items.MILK_BUCKET))
-                .save(pWriter);
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.CHOCOLATE.get())
-                .requires(Items.COCOA_BEANS)
-                .requires(Items.SUGAR)
-                .unlockedBy(getHasName(Items.COCOA_BEANS), has(Items.COCOA_BEANS))
-                .save(pWriter);
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.CHOCOLATE_MILK_CUP.get())
-                .requires(ModItems.CHOCOLATE.get())
-                .requires(Items.SUGAR)
-                .requires(ModItems.CUP.get())
-                .unlockedBy(getHasName(ModItems.CHOCOLATE.get()), has(ModItems.CHOCOLATE.get()))
-                .save(pWriter);
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.CASTER_SUGAR.get())
-                .requires(Items.SUGAR)
-                .unlockedBy(getHasName(Items.SUGAR), has(Items.SUGAR))
-                .save(pWriter);
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.FLOUR.get())
-                .requires(Items.WHEAT)
-                .requires(Items.WATER_BUCKET)
-                .unlockedBy(getHasName(Items.WHEAT), has(Items.WHEAT))
-                .save(pWriter);
-
 
 
         //CLASSIC CRAFTING
@@ -104,6 +75,27 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.PINK_QUARTZ_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.PINK_QUARTZ_BLOCK.get()), has(ModBlocks.PINK_QUARTZ_BLOCK.get()))
                 .save(pWriter);
+
+        //Recetas del Cooking _ Table
+
+        createCookingTableRecipe(pWriter, new Item[]{
+                ModItems.SALT.get(),
+                Items.MILK_BUCKET
+        }, ModItems.BUTTER.get(), "butter");
+
+        createCookingTableRecipe(pWriter, new Item[]{
+                ModItems.CHOCOLATE.get(),
+                Items.SUGAR,
+                ModItems.CUP.get()
+        }, ModItems.CHOCOLATE_MILK_CUP.get(), "chocolate_milk_cup");
+
+        createCookingTableRecipe(pWriter, new Item[]{
+                Items.WHEAT,
+                Items.WATER_BUCKET
+        }, ModItems.FLOUR.get(), "flour");
+
+
+
     }
 
     private void simpleFoodCooking(Consumer<FinishedRecipe> pWriter, int pCookingTime, RegistryObject<Item> pIngredient, RegistryObject<Item> pResult, float pExperience) {
@@ -130,7 +122,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .unlockedBy(getHasName(itemlike), has(itemlike)).save(pFinishedRecipeConsumer,
                             ExampleMod.MOD_ID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
         }
+    }
 
+    private void createCookingTableRecipe(Consumer<FinishedRecipe> consumer, Item[] ingredients, Item output, String recipeName) {
+        ResourceLocation recipeId = new ResourceLocation("tutorialmod", recipeName + "_cooking_recipe");
+        CookingTableRecipeBuilder.recipe(recipeId, ingredients, output)
+                .save(consumer);
     }
 
 }

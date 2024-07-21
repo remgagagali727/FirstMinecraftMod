@@ -26,6 +26,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.PINK_QUARTZ_BLOCK);
         blockWithItem(ModBlocks.PINK_QUARTZ_ORE);
         blockWithItem(ModBlocks.TOPAZ_BLOCK);
+        simpleBlock(ModBlocks.COOKING_TABLE.get(),
+                new ModelFile.UncheckedModelFile(modLoc(
+                        "block/cooking_table")));
 
 
 
@@ -97,5 +100,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         models[0] = new ConfiguredModel(models().crop(name + state.getValue(((T) block).getIntegerProperty()),
                 new ResourceLocation(ExampleMod.MOD_ID, "block/" + name + state.getValue(((T) block).getIntegerProperty()))).renderType("cutout"));
         return models;
+    }
+
+    public void simpleBlockWithItem(RegistryObject<Block> block) {
+        String path = ExampleMod.MOD_ID + ":block/" + block.getId().getPath();
+        simpleBlockWithItem(block.get(), new ModelFile.UncheckedModelFile(path));
     }
 }

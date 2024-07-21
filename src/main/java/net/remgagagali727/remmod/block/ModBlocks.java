@@ -12,6 +12,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.remgagagali727.remmod.ExampleMod;
+import net.remgagagali727.remmod.block.custom.CookingTableBlock;
 import net.remgagagali727.remmod.block.custom.CornCropBlock;
 import net.remgagagali727.remmod.block.custom.SoundBlock;
 import net.remgagagali727.remmod.block.custom.StrawberryCropBlock;
@@ -37,6 +38,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> TOPAZ_BLOCK = registryBlock("topaz_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> COOKING_TABLE = registryBlock("cooking_table",
+            () -> new CookingTableBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
 
     public static final RegistryObject<Block> CATMINT = registryBlock("catmint",
             () -> new FlowerBlock(() -> ModEffects.RADIATION.get(), 5,

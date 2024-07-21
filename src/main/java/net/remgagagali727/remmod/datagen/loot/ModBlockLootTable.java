@@ -6,7 +6,6 @@ import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
@@ -54,13 +53,15 @@ public class ModBlockLootTable extends BlockLootSubProvider {
         this.add(ModBlocks.PINK_QUARTZ_ORE.get(),
                 block -> createDiamondLikeOreDrops(ModBlocks.PINK_QUARTZ_ORE.get(), ModItems.RAW_PINK_QUARTZ.get()));
 
-        cropLootTable(ModBlocks.STRAWBERRY_CROP.get(), ModItems.STRAWBERRY_SEEDS.get(), ModItems.STRAWBERRY.get(),
+        this.cropLootTable(ModBlocks.STRAWBERRY_CROP.get(), ModItems.STRAWBERRY_SEEDS.get(), ModItems.STRAWBERRY.get(),
                 StrawberryCropBlock.AGE, StrawberryCropBlock.MAX_AGE);
 
-        cropLootTable(ModBlocks.CORN_CROP.get(), ModItems.CORN_SEEDS.get(), ModItems.CORN.get(),
+        this.cropLootTable(ModBlocks.CORN_CROP.get(), ModItems.CORN_SEEDS.get(), ModItems.CORN.get(),
                 CornCropBlock.AGE, CornCropBlock.MAX_AGE);
 
         this.add(ModBlocks.CHOCOLATE_CAKE.get(), noDrop());
+
+        this.dropSelf(ModBlocks.COOKING_TABLE.get());
     }
 
     private void cropLootTable(Block crop, Item seeds, Item result, IntegerProperty ip, int maxAge) {

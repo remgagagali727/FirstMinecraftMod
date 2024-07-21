@@ -54,6 +54,7 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.METAL_DETECTOR.get());
                         output.accept(ModItems.URANIUM_SCYTHE.get());
                         output.accept(ModItems.CUP.get());
+                        output.accept(ModBlocks.COOKING_TABLE.get());
                     })
                     .build());
 

@@ -1,8 +1,12 @@
-// 1.20.1	2024-07-19T22:38:47.8029676	Loot Tables
+// 1.20.1	2024-07-20T22:50:00.7860151	Loot Tables
 a5308914890f4fbc6d39248caa834f368767be60 data/tutorialmod/loot_tables/blocks/catmint.json
 564bc163f01721cb8dab59898ed7663027219194 data/tutorialmod/loot_tables/blocks/chocolate_cake.json
 bbcae59d1e201a439afa38e9db42a7d348f2c806 data/tutorialmod/loot_tables/blocks/cooking_table.json
 e68a44393836168e1e293126bdff714720f928f1 data/tutorialmod/loot_tables/blocks/corn_crop.json
+e137155d8f7f2d1cbf6d9b1d6678241fb77f7c52 data/tutorialmod/loot_tables/blocks/lemon_leaves.json
+31db773e024170a9f40dbf4cf2628039e8f6d5b7 data/tutorialmod/loot_tables/blocks/lemon_log.json
+fcd3e0f7b84a84f2ffee640d1cb392e946df356a data/tutorialmod/loot_tables/blocks/lemon_planks.json
+da87ad3bc14f5f1cc485ac050ac145e0d1c624fc data/tutorialmod/loot_tables/blocks/lemon_wood.json
 1e7a56d41eb9676835d998b6271c1b52c913bf3e data/tutorialmod/loot_tables/blocks/pink_quartz_block.json
 90aa98a92ffe50c3e130f65c6cc14055fcccba1f data/tutorialmod/loot_tables/blocks/pink_quartz_button.json
 109a43b2f708fce0806939b8a24a3aefb8d7b144 data/tutorialmod/loot_tables/blocks/pink_quartz_door.json
@@ -17,4 +21,6 @@ baa667a052cb6fe5d2f722a2dc0234e944949d78 data/tutorialmod/loot_tables/blocks/pin
 64ba5568715cb39bbac17bf9a847cf65f79bec13 data/tutorialmod/loot_tables/blocks/potted_catmint.json
 4a8cfacccc2c162b32d7ced097c65185c5c5bc88 data/tutorialmod/loot_tables/blocks/sound_block.json
 1f5745e65cfe5db7b41fcdf352e1a9f3378f9874 data/tutorialmod/loot_tables/blocks/strawberry_crop.json
+c625e9e3885c8dc98aab1bb38b9b9f7f0048079f data/tutorialmod/loot_tables/blocks/stripped_lemon_log.json
+79f542481522ea520043369428dbc541e57ae0a6 data/tutorialmod/loot_tables/blocks/stripped_lemon_wood.json
 a1d98313fa05ee34362e53c6b08aa4d53a27cddb data/tutorialmod/loot_tables/blocks/topaz_block.json

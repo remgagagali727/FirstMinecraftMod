@@ -1,21 +1,25 @@
 package net.remgagagali727.remmod.block;
 
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.remgagagali727.remmod.ExampleMod;
-import net.remgagagali727.remmod.block.custom.CookingTableBlock;
-import net.remgagagali727.remmod.block.custom.CornCropBlock;
-import net.remgagagali727.remmod.block.custom.SoundBlock;
-import net.remgagagali727.remmod.block.custom.StrawberryCropBlock;
+import net.remgagagali727.remmod.block.custom.*;
+import net.remgagagali727.remmod.block.custom.models.ModFlammableRotatedPilarBlock;
+import net.remgagagali727.remmod.block.custom.models.ModLeavesBlock;
+import net.remgagagali727.remmod.block.custom.models.ModPlankBlock;
 import net.remgagagali727.remmod.effects.ModEffects;
 import net.remgagagali727.remmod.item.ModItems;
 
@@ -91,6 +95,21 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> SOUND_BLOCK = registryBlock("sound_block",
             () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> LEMON_LOG = registryBlock("lemon_log",
+            () -> new ModFlammableRotatedPilarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> LEMON_WOOD = registryBlock("lemon_wood",
+            () -> new ModFlammableRotatedPilarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).strength(3f)));
+    public static final RegistryObject<Block> STRIPPED_LEMON_LOG = registryBlock("stripped_lemon_log",
+            () -> new ModFlammableRotatedPilarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> STRIPPED_LEMON_WOOD = registryBlock("stripped_lemon_wood",
+            () -> new ModFlammableRotatedPilarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD).strength(3f)));
+
+    public static final RegistryObject<Block> LEMON_PLANKS = registryBlock("lemon_planks",
+            () -> new ModPlankBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(3f)));
+    public static final RegistryObject<Block> LEMON_LEAVES = registryBlock("lemon_leaves",
+            () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).strength(0.5f).noOcclusion()));
+
 
     private static <T extends Block>RegistryObject<T> registryBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

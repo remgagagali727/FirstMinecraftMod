@@ -20,6 +20,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+
         this.tag(ModTags.Blocks.METAL_DETECTOR_VALUABLES)
                 .add(ModBlocks.PINK_QUARTZ_ORE.get())
                 .addTag(Tags.Blocks.ORES);
@@ -37,6 +38,15 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.PINK_QUARTZ_ORE.get(),
                         ModBlocks.TOPAZ_BLOCK.get());
 
+        this.tag(BlockTags.MINEABLE_WITH_AXE)
+                .add(ModBlocks.LEMON_LOG.get(),
+                        ModBlocks.LEMON_WOOD.get(),
+                        ModBlocks.STRIPPED_LEMON_LOG.get(),
+                        ModBlocks.STRIPPED_LEMON_WOOD.get());
+
+        this.tag(BlockTags.MINEABLE_WITH_HOE)
+                .add(ModBlocks.LEMON_LEAVES.get());
+
         this.tag(BlockTags.FENCES)
                 .add(ModBlocks.PINK_QUARTZ_FENCE.get());
 
@@ -48,5 +58,17 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(BlockTags.WALLS)
                 .add(ModBlocks.PINK_QUARTZ_WALL.get());
+
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.LEMON_LOG.get())
+                .add(ModBlocks.STRIPPED_LEMON_LOG.get())
+                .add(ModBlocks.LEMON_WOOD.get())
+                .add(ModBlocks.STRIPPED_LEMON_WOOD.get());
+
+        this.tag(BlockTags.PLANKS)
+                .add(ModBlocks.LEMON_PLANKS.get());
+
+        this.tag(BlockTags.LEAVES)
+                .add(ModBlocks.LEMON_LEAVES.get());
     }
 }

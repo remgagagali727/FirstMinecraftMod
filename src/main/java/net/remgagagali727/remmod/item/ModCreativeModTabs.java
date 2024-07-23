@@ -98,6 +98,13 @@ public class ModCreativeModTabs {
                                 output.accept(ModBlocks.PINK_QUARTZ_FENCE.get());
                                 output.accept(ModBlocks.PINK_QUARTZ_FENCE_GATE.get());
                                 output.accept(ModBlocks.PINK_QUARTZ_WALL.get());
+                                output.accept(ModBlocks.COOKING_TABLE.get());
+                                output.accept(ModBlocks.LEMON_LOG.get());
+                                output.accept(ModBlocks.LEMON_WOOD.get());
+                                output.accept(ModBlocks.STRIPPED_LEMON_LOG.get());
+                                output.accept(ModBlocks.STRIPPED_LEMON_WOOD.get());
+                                output.accept(ModBlocks.LEMON_PLANKS.get());
+                                output.accept(ModBlocks.LEMON_LEAVES.get());
                             })
                             .build());
 

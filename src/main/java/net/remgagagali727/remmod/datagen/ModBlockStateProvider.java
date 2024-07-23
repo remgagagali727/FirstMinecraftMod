@@ -6,11 +6,12 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.*;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.remgagagali727.remmod.ExampleMod;
 import net.remgagagali727.remmod.block.ModBlocks;
 import net.remgagagali727.remmod.block.custom.CornCropBlock;
-import net.remgagagali727.remmod.block.custom.ICropBasics;
+import net.remgagagali727.remmod.block.custom.models.ICropBasics;
 import net.remgagagali727.remmod.block.custom.StrawberryCropBlock;
 
 import java.util.List;
@@ -56,9 +57,34 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 new ResourceLocation("flower_pot_cross"), "plant",
                 blockTexture(ModBlocks.CATMINT.get())).renderType("cutout"));
 
-        //cakeBlock(ModBlocks.CHOCOLATE_CAKE);
-
         makeCake(ModBlocks.CHOCOLATE_CAKE);
+
+        logBlock(((RotatedPillarBlock) ModBlocks.LEMON_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.LEMON_WOOD.get()), blockTexture(ModBlocks.LEMON_LOG.get()), blockTexture(ModBlocks.LEMON_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_LEMON_LOG.get()), blockTexture(ModBlocks.STRIPPED_LEMON_LOG.get()),
+                new ResourceLocation(ExampleMod.MOD_ID, "block/stripped_lemon_log_top"));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_LEMON_WOOD.get()), blockTexture(ModBlocks.STRIPPED_LEMON_LOG.get()),
+                blockTexture(ModBlocks.STRIPPED_LEMON_LOG.get()));
+
+        blockItem(ModBlocks.LEMON_LOG);
+        blockItem(ModBlocks.LEMON_WOOD);
+        blockItem(ModBlocks.STRIPPED_LEMON_LOG);
+        blockItem(ModBlocks.STRIPPED_LEMON_WOOD);
+
+        blockWithItem(ModBlocks.LEMON_PLANKS);
+
+        leavesBlock(ModBlocks.LEMON_LEAVES);
+    }
+
+    private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockWithItem(blockRegistryObject.get(),
+                models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), new ResourceLocation("minecraft:block/leaves"),
+                        "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+
+    private void blockItem(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile(ExampleMod.MOD_ID +
+                ":block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

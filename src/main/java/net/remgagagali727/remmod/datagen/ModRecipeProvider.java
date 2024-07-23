@@ -3,6 +3,7 @@ package net.remgagagali727.remmod.datagen;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
@@ -10,12 +11,15 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.ShapelessRecipe;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
 import net.remgagagali727.remmod.ExampleMod;
 import net.remgagagali727.remmod.block.ModBlocks;
 import net.remgagagali727.remmod.item.ModItems;
 import net.remgagagali727.remmod.recipe.CookingTableRecipeBuilder;
+import net.remgagagali727.remmod.util.ModTags;
 
 import java.util.Iterator;
 import java.util.List;
@@ -31,6 +35,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
+        //Wood Basics
+        woodBasics(pWriter, ModBlocks.LEMON_LOG, ModBlocks.STRIPPED_LEMON_LOG, ModBlocks.LEMON_WOOD, ModBlocks.STRIPPED_LEMON_WOOD,
+                ModBlocks.LEMON_PLANKS);
+
         //COOKING AND SMELTING
 
         blasting(pWriter, PINK_QUARTZ_SMELTABLES, RecipeCategory.MISC, ModItems.PINK_QUARTZ.get(), 0.3f, 100, "pink_quartz");
@@ -106,6 +114,30 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 
     }
+
+    private void woodBasics(Consumer<FinishedRecipe> pWriter, RegistryObject<Block> log, RegistryObject<Block> sLog, RegistryObject<Block> wood, RegistryObject<Block> sWood, RegistryObject<Block> planks) {
+        // Receta para convertir Logs en Planks
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, planks.get(), 4)
+                .requires(ModTags.Items.CAN_CRAFT_LEMON_PLANKS)
+                .unlockedBy(getHasName(log.get()), has(log.get()))
+                .unlockedBy(getHasName(sLog.get()), has(sLog.get()))
+                .unlockedBy(getHasName(wood.get()), has(wood.get()))
+                .unlockedBy(getHasName(sWood.get()), has(sWood.get()))
+                .save(pWriter);
+
+        // Receta para convertir Logs en Wood
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, wood.get(), 1)
+                .requires(log.get())
+                .unlockedBy(getHasName(log.get()), has(log.get()))
+                .save(pWriter);
+
+        // Receta para convertir Stripped Logs en Stripped Wood
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, sWood.get(), 1)
+                .requires(sLog.get())
+                .unlockedBy(getHasName(sLog.get()), has(sLog.get()))
+                .save(pWriter);
+    }
+
 
     private void simpleFoodCooking(Consumer<FinishedRecipe> pWriter, int pCookingTime, RegistryObject<Item> pIngredient, RegistryObject<Item> pResult, float pExperience) {
            simpleCookingRecipe(pWriter, "campfire", RecipeSerializer.CAMPFIRE_COOKING_RECIPE, pCookingTime, pIngredient.get(), pResult.get(), pExperience);

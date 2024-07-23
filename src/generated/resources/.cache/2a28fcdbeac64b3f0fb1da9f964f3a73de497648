@@ -1,4 +1,8 @@
-// 1.20.1	2024-07-11T11:07:55.100863	Tags for minecraft:item mod id tutorialmod
+// 1.20.1	2024-07-20T22:50:00.7990471	Tags for minecraft:item mod id tutorialmod
 23d1875f5ca8259e36d5996b5bb8b2c1a4222f38 data/forge/tags/items/tools.json
+3ff7366a8257170c03b35f1c7934f1bc9a70dcd9 data/minecraft/tags/items/leaves.json
+23ff8035576b063dd2b7d5a59d4b829d78d976a9 data/minecraft/tags/items/logs_that_burn.json
+c6a4504d19a7effe1852f108d247fdef9c91243d data/minecraft/tags/items/planks.json
 23d1875f5ca8259e36d5996b5bb8b2c1a4222f38 data/minecraft/tags/items/swords.json
 4a893ec66918e140edeec420ba75b3fefb099af9 data/minecraft/tags/items/trimmable_armor.json
+4191c9ef9f1d663c447f9e57a0aa387c8cf03b7a data/tutorialmod/tags/items/can_craft_lemon_planks.json

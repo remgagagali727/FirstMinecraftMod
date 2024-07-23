@@ -6,6 +6,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
 import net.remgagagali727.remmod.ExampleMod;
 
@@ -23,6 +24,7 @@ public class ModTags {
 
     public static class Items {
 
+        public static final TagKey<Item> CAN_CRAFT_LEMON_PLANKS = tag("can_craft_lemon_planks");
 
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(new ResourceLocation(ExampleMod.MOD_ID, name));

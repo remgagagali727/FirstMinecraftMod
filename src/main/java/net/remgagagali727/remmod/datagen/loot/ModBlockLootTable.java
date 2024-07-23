@@ -4,17 +4,20 @@ import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.BonusLevelTableCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
 import net.remgagagali727.remmod.block.ModBlocks;
 import net.remgagagali727.remmod.block.custom.CornCropBlock;
@@ -27,6 +30,11 @@ public class ModBlockLootTable extends BlockLootSubProvider {
     public ModBlockLootTable() {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags());
     }
+
+    private static final LootItemCondition.Builder HAS_SHEARS_OR_SILK_TOUCH;
+    private static final LootItemCondition.Builder HAS_NO_SHEARS_OR_SILK_TOUCH;
+    private static final float[] NORMAL_LEAVES_STICK_CHANCES;
+    private static final float[] NORMAL_FRUIT_CHANCES;
 
     @Override
     protected void generate() {
@@ -62,6 +70,16 @@ public class ModBlockLootTable extends BlockLootSubProvider {
         this.add(ModBlocks.CHOCOLATE_CAKE.get(), noDrop());
 
         this.dropSelf(ModBlocks.COOKING_TABLE.get());
+
+        this.dropSelf(ModBlocks.LEMON_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_LEMON_LOG.get());
+        this.dropSelf(ModBlocks.LEMON_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_LEMON_WOOD.get());
+        this.dropSelf(ModBlocks.LEMON_PLANKS.get());
+
+        this.add(ModBlocks.LEMON_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.SOUND_BLOCK.get(), ModItems.CORN.get(), //TODO: Change to Sappling and Lemon
+                        NORMAL_LEAVES_SAPLING_CHANCES, NORMAL_FRUIT_CHANCES));
     }
 
     private void cropLootTable(Block crop, Item seeds, Item result, IntegerProperty ip, int maxAge) {
@@ -82,8 +100,27 @@ public class ModBlockLootTable extends BlockLootSubProvider {
                                 .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
     }
 
+    protected LootTable.Builder createLeavesDrops(Block leafBlock, Block saplingBlock, Item customItem, float[] saplingChance, float[] customItemChance) {
+        return this.createLeavesDrops(leafBlock, saplingBlock, saplingChance)
+                .withPool(LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1.0F))
+                        .when(HAS_NO_SHEARS_OR_SILK_TOUCH)
+                        .add(LootItem.lootTableItem(customItem)
+                                .when(BonusLevelTableCondition.bonusLevelFlatChance(Enchantments.BLOCK_FORTUNE, customItemChance)))
+                        .add(LootItem.lootTableItem(Items.STICK)
+                                .when(BonusLevelTableCondition.bonusLevelFlatChance(Enchantments.BLOCK_FORTUNE, customItemChance)))
+                );
+    }
+
     @Override
     protected Iterable<Block> getKnownBlocks() {
         return ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
+    }
+
+    static {
+        HAS_SHEARS_OR_SILK_TOUCH = HAS_SHEARS.or(HAS_SILK_TOUCH);
+        HAS_NO_SHEARS_OR_SILK_TOUCH = HAS_SHEARS_OR_SILK_TOUCH.invert();
+        NORMAL_LEAVES_STICK_CHANCES = new float[]{0.02F, 0.022222223F, 0.025F, 0.033333335F, 0.1F};
+        NORMAL_FRUIT_CHANCES = new float[]{0.1f, 0.2f, 0.12f, 0.22f, 0.5f};
     }
 }

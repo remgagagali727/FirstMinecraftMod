@@ -7,9 +7,10 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.remgagagali727.remmod.block.custom.models.ICropBasics;
 import net.remgagagali727.remmod.item.ModItems;
 
-public class StrawberryCropBlock extends CropBlock implements ICropBasics{
+public class StrawberryCropBlock extends CropBlock implements ICropBasics {
     public static final int MAX_AGE = 5;
     public static final IntegerProperty AGE = BlockStateProperties.AGE_5;
 

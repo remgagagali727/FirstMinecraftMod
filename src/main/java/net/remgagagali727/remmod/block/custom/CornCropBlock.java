@@ -17,6 +17,7 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.common.IPlantable;
+import net.remgagagali727.remmod.block.custom.models.ICropBasics;
 import net.remgagagali727.remmod.item.ModItems;
 
 public class CornCropBlock extends CropBlock implements ICropBasics {

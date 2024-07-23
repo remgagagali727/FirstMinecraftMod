@@ -20,6 +20,7 @@ import net.remgagagali727.remmod.block.custom.*;
 import net.remgagagali727.remmod.block.custom.models.ModFlammableRotatedPilarBlock;
 import net.remgagagali727.remmod.block.custom.models.ModLeavesBlock;
 import net.remgagagali727.remmod.block.custom.models.ModPlankBlock;
+import net.remgagagali727.remmod.block.custom.models.PizzaBlock;
 import net.remgagagali727.remmod.effects.ModEffects;
 import net.remgagagali727.remmod.item.ModItems;
 
@@ -109,6 +110,9 @@ public class ModBlocks {
             () -> new ModPlankBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(3f)));
     public static final RegistryObject<Block> LEMON_LEAVES = registryBlock("lemon_leaves",
             () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).strength(0.5f).noOcclusion()));
+
+    public static final RegistryObject<Block> TEMPLATE_PIZZA = registryBlock("template_pizza",
+            () -> new PizzaBlock(BlockBehaviour.Properties.copy(Blocks.CAKE).noLootTable()));
 
 
     private static <T extends Block>RegistryObject<T> registryBlock(String name, Supplier<T> block) {

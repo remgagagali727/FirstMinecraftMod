@@ -13,6 +13,7 @@ import net.remgagagali727.remmod.block.ModBlocks;
 import net.remgagagali727.remmod.block.custom.CornCropBlock;
 import net.remgagagali727.remmod.block.custom.models.ICropBasics;
 import net.remgagagali727.remmod.block.custom.StrawberryCropBlock;
+import net.remgagagali727.remmod.block.custom.models.PizzaBlock;
 
 import java.util.List;
 import java.util.function.Function;
@@ -74,6 +75,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.LEMON_PLANKS);
 
         leavesBlock(ModBlocks.LEMON_LEAVES);
+
+        makePizza(ModBlocks.TEMPLATE_PIZZA);
     }
 
     private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
@@ -94,21 +97,40 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private void makeCake(RegistryObject<Block> block) {
         String name = block.getId().getPath();
         CakeBlock cakeBlock = ((CakeBlock) block.get());
-        List<String> extra = List.of(
-                "", "_slice1", "_slice2", "_slice3", "_slice4", "_slice5", "_slice6"
-        );
         Function<BlockState, ConfiguredModel[]> function = state -> cakeStates(state, name);
         getVariantBuilder(cakeBlock).forAllStates(function);
     }
 
     private ConfiguredModel[] cakeStates(BlockState state, String path) {
         BlockModelBuilder BMB = models().withExistingParent(path + state.getValue(CakeBlock.BITES),
-                new ResourceLocation(ExampleMod.MOD_ID + ":block/cake_template" + state.getValue(CakeBlock.BITES)))
-                    .texture("particle", new ResourceLocation(ExampleMod.MOD_ID + ":block/" + path + "_top"))
-                    .texture("bottom", new ResourceLocation(ExampleMod.MOD_ID + ":block/" + path + "_bottom"))
-                    .texture("top", new ResourceLocation(ExampleMod.MOD_ID + ":block/" + path + "_top"))
-                    .texture("side", new ResourceLocation(ExampleMod.MOD_ID + ":block/" + path + "_side"))
-                    .texture("inside", new ResourceLocation(ExampleMod.MOD_ID + ":block/" + path + "_inner"));
+                        new ResourceLocation(ExampleMod.MOD_ID + ":block/cake_template" + state.getValue(CakeBlock.BITES)))
+                .texture("particle", new ResourceLocation(ExampleMod.MOD_ID + ":block/" + path + "_top"))
+                .texture("bottom", new ResourceLocation(ExampleMod.MOD_ID + ":block/" + path + "_bottom"))
+                .texture("top", new ResourceLocation(ExampleMod.MOD_ID + ":block/" + path + "_top"))
+                .texture("side", new ResourceLocation(ExampleMod.MOD_ID + ":block/" + path + "_side"))
+                .texture("inside", new ResourceLocation(ExampleMod.MOD_ID + ":block/" + path + "_inner"));
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = ConfiguredModel.builder()
+                .modelFile(BMB)
+                .buildLast();
+        return models;
+    }
+
+    private void makePizza(RegistryObject<Block> block) {
+        String name = block.getId().getPath();
+        PizzaBlock cakeBlock = ((PizzaBlock) block.get());
+        Function<BlockState, ConfiguredModel[]> function = state -> pizzaStates(state, name);
+        getVariantBuilder(cakeBlock).forAllStates(function);
+    }
+
+    private ConfiguredModel[] pizzaStates(BlockState state, String path) {
+        BlockModelBuilder BMB = models().withExistingParent(path + state.getValue(PizzaBlock.BITES),
+                        new ResourceLocation(ExampleMod.MOD_ID + ":block/pizza_template" + state.getValue(PizzaBlock.BITES)))
+                .texture("particle", new ResourceLocation(ExampleMod.MOD_ID + ":block/" + path + "_top"))
+                .texture("bottom", new ResourceLocation(ExampleMod.MOD_ID + ":block/" + path + "_bottom"))
+                .texture("top", new ResourceLocation(ExampleMod.MOD_ID + ":block/" + path + "_top"))
+                .texture("side", new ResourceLocation(ExampleMod.MOD_ID + ":block/" + path + "_side"))
+                .texture("inside", new ResourceLocation(ExampleMod.MOD_ID + ":block/" + path + "_inner"));
         ConfiguredModel[] models = new ConfiguredModel[1];
         models[0] = ConfiguredModel.builder()
                 .modelFile(BMB)

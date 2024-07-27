@@ -76,7 +76,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         leavesBlock(ModBlocks.LEMON_LEAVES);
 
-        makePizza(ModBlocks.TEMPLATE_PIZZA);
+        makePizza(ModBlocks.PEPERONI_PIZZA);
     }
 
     private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
@@ -127,10 +127,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
         BlockModelBuilder BMB = models().withExistingParent(path + state.getValue(PizzaBlock.BITES),
                         new ResourceLocation(ExampleMod.MOD_ID + ":block/pizza_template" + state.getValue(PizzaBlock.BITES)))
                 .texture("particle", new ResourceLocation(ExampleMod.MOD_ID + ":block/" + path + "_top"))
-                .texture("bottom", new ResourceLocation(ExampleMod.MOD_ID + ":block/" + path + "_bottom"))
-                .texture("top", new ResourceLocation(ExampleMod.MOD_ID + ":block/" + path + "_top"))
-                .texture("side", new ResourceLocation(ExampleMod.MOD_ID + ":block/" + path + "_side"))
-                .texture("inside", new ResourceLocation(ExampleMod.MOD_ID + ":block/" + path + "_inner"));
+                //bottom
+                .texture("0", new ResourceLocation(ExampleMod.MOD_ID + ":block/" + path + "_bottom"))
+                //inner
+                .texture("1", new ResourceLocation(ExampleMod.MOD_ID + ":block/" + path + "_inner"))
+                //side
+                .texture("2", new ResourceLocation(ExampleMod.MOD_ID + ":block/" + path + "_side"))
+                //top
+                .texture("3", new ResourceLocation(ExampleMod.MOD_ID + ":block/" + path + "_top"));
         ConfiguredModel[] models = new ConfiguredModel[1];
         models[0] = ConfiguredModel.builder()
                 .modelFile(BMB)

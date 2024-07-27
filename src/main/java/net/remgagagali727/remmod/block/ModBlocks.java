@@ -111,7 +111,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> LEMON_LEAVES = registryBlock("lemon_leaves",
             () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).strength(0.5f).noOcclusion()));
 
-    public static final RegistryObject<Block> TEMPLATE_PIZZA = registryBlock("template_pizza",
+    public static final RegistryObject<Block> PEPERONI_PIZZA = registryBlock("peperoni_pizza",
             () -> new PizzaBlock(BlockBehaviour.Properties.copy(Blocks.CAKE).noLootTable()));
 
 

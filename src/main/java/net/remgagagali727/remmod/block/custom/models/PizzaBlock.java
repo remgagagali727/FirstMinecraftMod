@@ -15,20 +15,27 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class PizzaBlock extends Block {
     public static final int MAX_BITES = 7;
     public static final IntegerProperty BITES = IntegerProperty.create("bites", 0, 7);
     public static final VoxelShape[] SHAPE_BY_BITE = new VoxelShape[]{
-            Block.box(1.0, 0.0, 1.0, 15.0, 8.0, 15.0),
-            Block.box(3.0, 0.0, 1.0, 15.0, 8.0, 15.0),
-            Block.box(5.0, 0.0, 1.0, 15.0, 8.0, 15.0),
-            Block.box(7.0, 0.0, 1.0, 15.0, 8.0, 15.0),
-            Block.box(9.0, 0.0, 1.0, 15.0, 8.0, 15.0),
-            Block.box(11.0, 0.0, 1.0, 15.0, 8.0, 15.0),
-            Block.box(13.0, 0.0, 1.0, 15.0, 8.0, 15.0),
-            Block.box(14.0, 0.0, 1.0, 15.0, 8.0, 15.0)};
+            Block.box(1.0, 0.0, 1.0, 15.0, 3.0, 15.0),
+            Block.box(1.0, 0.0, 1.0, 15.0, 3.0, 15.0),
+            Shapes.or(
+                Block.box(1.0, 0.0, 1.0, 8.0, 3.0, 15.0),
+                Block.box(8.0, 0.0, 8.0, 15.0, 3.0, 15.0)
+            ).optimize(),
+            Shapes.or(
+                    Block.box(1.0, 0.0, 1.0, 8.0, 3.0, 15.0),
+                    Block.box(8.0, 0.0, 8.0, 15.0, 3.0, 15.0)
+            ).optimize(),
+            Block.box(1.0, 0.0, 1.0, 8.0, 3.0, 15.0),
+            Block.box(1.0, 0.0, 1.0, 8.0, 3.0, 15.0),
+            Block.box(1.0, 0.0, 1.0, 8.0, 3.0, 8.0),
+            Block.box(1.0, 0.0, 1.0, 8.0, 3.0, 8.0)};
 
     public PizzaBlock(Properties pProperties) {
         super(pProperties);

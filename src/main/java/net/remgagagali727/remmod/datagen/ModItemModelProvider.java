@@ -71,8 +71,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.CORN_SEEDS);
         simpleItem(ModItems.CHOCOLATE);
         simpleBlockItem(ModBlocks.CHOCOLATE_CAKE);
-        simpleBlockItem(ModBlocks.COOKING_TABLE);
-
+        simpleBlockItem(ModBlocks.PEPERONI_PIZZA);
 
         //FULL SET DE BLOQUES NO BLOQUES
 
@@ -97,6 +96,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.PINK_QUARTZ_BOOTS);
 
         simpleBlockItemBlockTexture(ModBlocks.CATMINT);
+
+        //Custom Entity Blocks
+
+        simpleBlockItem(ModBlocks.COOKING_TABLE);
     }
 
     private void handHeldItem(RegistryObject<Item> swordItem) {

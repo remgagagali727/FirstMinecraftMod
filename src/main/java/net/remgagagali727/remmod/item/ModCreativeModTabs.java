@@ -79,7 +79,7 @@ public class ModCreativeModTabs {
                                 output.accept(ModItems.CHOCOLATE.get());
                                 output.accept(ModItems.CHOCOLATE_MILK_CUP.get());
                                 output.accept(ModBlocks.CHOCOLATE_CAKE.get());
-                                output.accept(ModBlocks.TEMPLATE_PIZZA.get());
+                                output.accept(ModBlocks.PEPERONI_PIZZA.get());
                             })
                             .build());
 

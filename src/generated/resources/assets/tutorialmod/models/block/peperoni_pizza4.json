@@ -1,0 +1,10 @@
+{
+  "parent": "tutorialmod:block/pizza_template4",
+  "textures": {
+    "0": "tutorialmod:block/peperoni_pizza_bottom",
+    "1": "tutorialmod:block/peperoni_pizza_inner",
+    "2": "tutorialmod:block/peperoni_pizza_side",
+    "3": "tutorialmod:block/peperoni_pizza_top",
+    "particle": "tutorialmod:block/peperoni_pizza_top"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "bites=0": {
+      "model": "tutorialmod:block/peperoni_pizza0"
+    },
+    "bites=1": {
+      "model": "tutorialmod:block/peperoni_pizza1"
+    },
+    "bites=2": {
+      "model": "tutorialmod:block/peperoni_pizza2"
+    },
+    "bites=3": {
+      "model": "tutorialmod:block/peperoni_pizza3"
+    },
+    "bites=4": {
+      "model": "tutorialmod:block/peperoni_pizza4"
+    },
+    "bites=5": {
+      "model": "tutorialmod:block/peperoni_pizza5"
+    },
+    "bites=6": {
+      "model": "tutorialmod:block/peperoni_pizza6"
+    },
+    "bites=7": {
+      "model": "tutorialmod:block/peperoni_pizza7"
+    }
+  }
+}
